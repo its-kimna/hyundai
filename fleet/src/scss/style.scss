@@ -906,6 +906,7 @@ input::placeholder {color:#999}
             }
             .list-content{flex:1}
             ~ .detail-item{margin-top:22px}
+            &:nth-child(3) .list-text{margin-top:17px}
         }
     }
 
@@ -914,6 +915,14 @@ input::placeholder {color:#999}
             ~ li{margin-top:10px}
             > em{flex:0 0 155px;color:#999}
             > span{flex:1}
+            .form-item{display:flex;width:100%;
+                .form-label{flex:0 0 185px;line-height:40px;color:#999;margin-bottom:0}
+                .form-select{flex:0 0 300px}
+                input.form-control{flex:0 0 600px;
+                    &.side-inp{flex:0 0 300px;margin-left:10px !important}
+                    &.full{flex:1}
+                }
+            }
         }
 
     }

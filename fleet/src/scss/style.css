@@ -3492,6 +3492,10 @@ input::placeholder {
   margin-top: 22px;
 }
 
+.wrap .refer-detail .detail-item:nth-child(3) .list-text {
+  margin-top: 17px;
+}
+
 .wrap .list-text li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3511,6 +3515,47 @@ input::placeholder {
 }
 
 .wrap .list-text li > span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.wrap .list-text li .form-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.wrap .list-text li .form-item .form-label {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 185px;
+          flex: 0 0 185px;
+  line-height: 40px;
+  color: #999;
+  margin-bottom: 0;
+}
+
+.wrap .list-text li .form-item .form-select {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 300px;
+          flex: 0 0 300px;
+}
+
+.wrap .list-text li .form-item input.form-control {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 600px;
+          flex: 0 0 600px;
+}
+
+.wrap .list-text li .form-item input.form-control.side-inp {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 300px;
+          flex: 0 0 300px;
+  margin-left: 10px !important;
+}
+
+.wrap .list-text li .form-item input.form-control.full {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
