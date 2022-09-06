@@ -14,23 +14,15 @@
 	<div class="wrap">
 		<header>
 			<div class="section">
-				<h1 class="logo"><button class="logo-link"><span class="blind">bluelink Fleet</span></button></h1>
+				<h1 class="logo"><button class="logo-link"><span class="blind">bluelink uptimecare</span></button></h1>
                 <div class="util">
-                    <div class="dropdown">
-                        <button class="link dropdown-toggle" type="button" data-coreui-toggle="dropdown" aria-expanded="false">
-                            Germany
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Germany</a></li>
-                            <li><a class="dropdown-item" href="#">Korean</a></li>
-                            <li><a class="dropdown-item" href="#">English</a></li>
-                        </ul>
-                    </div>
-                    <button class="link"><span>Hyundai Motor Group / John smith</span></button>
-                    <div>
-                        <button class="link"><i class="ico-alram"></i></button>
-                        <button class="link"><i class="ico-logout"></i></button>
-                    </div>
+                    <button class="link dropdown-toggle" data-coreui-toggle="dropdown" aria-expanded="false"><i class="ico-language"></i></button>
+                    <ul class="dropdown-menu language">
+                        <li><button class="lang-menu">English</button></li>
+                        <li><button class="lang-menu">Korean</button></li>
+                    </ul>
+                    <!-- <button class="link new"><i class="ico-alram new"></i></button> -->
+                    <button class="link"><i class="ico-user"></i><span>Hyundai Motor Group / John smith</span></button>
                 </div>
 			</div>
 		</header>
@@ -58,7 +50,7 @@
                             <li><button class="link-menu">Maintenance History</button></li>
                         </ul>
                     </li>
-                    <li class="on"><button class="link-menu"><i class="ico-menu06"></i><span>Safety Control</span></button></li>
+                    <li><button class="link-menu"><i class="ico-menu06"></i><span>Safety Control</span></button></li>
                     <li><button class="link-menu"><i class="ico-menu07"></i><span>Driving Analysis</span></button></li>
                     <li><button class="link-menu"><i class="ico-menu08"></i><span>Communications</span></button>
                         <ul class="depth">
@@ -66,7 +58,7 @@
                             <li><button class="link-menu">Q&A</button></li>
                         </ul>
                     </li>
-                    <li><button class="link-menu"><i class="ico-menu09"></i><span>Reference Info.</span></button>
+                    <li class="on"><button class="link-menu"><i class="ico-menu09"></i><span>Reference Info.</span></button>
                         <ul class="depth">
                             <li><button class="link-menu">Vehicle Mgt.</button></li>
                             <li><button class="link-menu">Business Vehicle Mgt.</button></li>
@@ -95,7 +87,11 @@
             <div class="content">
                 <div class="w-content">
                     <div class="title-area">
-                        <h3 class="page-title">Safety Check Monitoring</h3>
+                        <h3 class="page-title">Account management</h3>
+                        <div class="location">
+                            <span>System management</span>
+                            <span class="on">Account management</span>
+                        </div>
                     </div>
 
                     <div class="search-wrap">
@@ -123,7 +119,7 @@
                         </div>
                         <div class="group-box">
                             <div class="inp-group">
-                                <label for="inp6" class="form-label">Fleet</label>
+                                <label for="inp6" class="form-label">Corporation</label>
                                 <select class="form-select" id="inp6">
                                     <option selected>Open this select menu</option>
                                     <option value="1">One</option>
@@ -132,7 +128,45 @@
                                 </select>
                             </div>
                             <div class="inp-group">
-                                <label for="inp7" class="form-label">Safety Check Items</label>
+                                <label for="inp7" class="form-label">Fleet</label>
+                                <select class="form-select" id="inp7">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="inp-group">
+                                <label for="inp3" class="form-label">Vehicle group</label>
+                                <select class="form-select" id="inp3">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="inp-group">
+                                <label for="inp3" class="form-label">Vehicle type</label>
+                                <select class="form-select" id="inp3">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="group-box size">
+                            <div class="inp-group">
+                                <label for="inp6" class="form-label">Sale/Lease</label>
+                                <select class="form-select" id="inp6">
+                                    <option selected>Open this select menu</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="inp-group">
+                                <label for="inp7" class="form-label">Provisioning Status</label>
                                 <select class="form-select" id="inp7">
                                     <option selected>Open this select menu</option>
                                     <option value="1">One</option>
@@ -141,7 +175,7 @@
                                 </select>
                             </div>
                             <div class="inp-group hasbtn">
-                                <label for="inp3" class="form-label">VIN No.</label>
+                                <label for="inp3" class="form-label">Enter VIN</label>
                                 <select class="form-select" id="inp3">
                                     <option selected>Open this select menu</option>
                                     <option value="1">One</option>
@@ -155,169 +189,149 @@
                         </div>
                     </div>
 
-                    <div class="flex-line item-list-type">
-                        <div class="flex-item">
-                            <span>High Voltage Battery</span>
-                            <div>
-                                <strong class="text">158<em>EA</em></strong>
-                            </div>
-                        </div>
-                        <div class="flex-item">
-                            <span>Collision Occurrence</span>
-                            <div>
-                                <strong class="text">83<em>EA</em></strong>
-                            </div>
-                        </div>
-                        <div class="flex-item">
-                            <span>Hydrogen Tank <em>( Overcharge/Overheat/Overcooling )</em></span>
-                            <div>
-                                <strong class="text">21<em>EA</em></strong>
-                            </div>
-                        </div>
-                        <div class="flex-item">
-                            <span>Hydrogen Leak Detection</span>
-                            <div>
-                                <strong class="text">15<em>EA</em></strong>
-                            </div>
-                        </div>
-                        <div class="flex-item">
-                            <span>High VoltageInsulation Anomalies</span>
-                            <div>
-                                <strong class="text">1,234<em>EA</em></strong>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="section">
                         <div class="table-wrap">
                             <h4 class="stitle">Result <span class="col-point3">157</span></h4>
                             <div class="tbl-btn-group">
-                                <!-- select -->
-                                <select class="form-select" aria-label="Default Select">
-                                    <option selected>10</option>
-                                    <option value="1">10</option>
-                                    <option value="2">50</option>
-                                    <option value="3">100</option>
-                                </select>
-                                <!-- //select -->
                                 <button type="button" class="btn btn-outline-secondary btn-sm ico-down">Excel Download</button>
+                                <button class="btn btn-primary btn-sm ico-new">New</button>
                             </div>
                             <table class="table table-col datatable dataTable no-footer">
                                 <colgroup>
+                                    <col style="width:8%">
+                                    <col style="width:11%">
+                                    <col style="width:10%" span="5">
+                                    <col style="width:11%">
                                     <col style="width:10%">
-                                    <col style="width:18%">
-                                    <col style="width:15%">
-                                    <col style="width:14%">
-                                    <col style="width:14%">
-                                    <col style="width:14%">
-                                    <col style="width:15%">
                                 </colgroup>
                                 <thead>
                                     <tr>
-                                        <th class="sorting sorting_asc" tabindex="0">No. <span>sort</span></th>
-                                        <th class="sorting sorting_asc" tabindex="0">Status <span>sort</span></th>
+                                        <th class="sorting sorting_asc" tabindex="0">No</th>
                                         <th class="sorting sorting_asc" tabindex="0">VIN</th>
                                         <th class="sorting sorting_asc" tabindex="0">Vehicle Type <span>sort</span></th>
-                                        <th class="sorting sorting_asc" tabindex="0">Fleet <span>sort</span></th>
-                                        <th class="sorting sorting_asc" tabindex="0">Safety Check Item <span>sort</span></th>
+                                        <th class="sorting sorting_asc" tabindex="0">ICCID <span>sort</span></th>
+                                        <th class="sorting sorting_asc" tabindex="0">IMEI <span>sort</span></th>
+                                        <th class="sorting sorting_asc" tabindex="0">IMSI <span>sort</span></th>
+                                        <th class="sorting sorting_asc" tabindex="0">Corporation <span>sort</span></th>
+                                        <th class="sorting sorting_asc" tabindex="0">Provisioning Status <span>sort</span></th>
                                         <th class="sorting sorting_asc" tabindex="0">Date <span>sort</span></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th>157</th>
-                                        <td>exchange</td>
                                         <td>KMFXXXXXXXX123456</td>
                                         <td>QZ FCEV</td>
-                                        <td>XXXXXXXXXXX</td>
-                                        <td>high voltage</td>
-                                        <td>10-31-2022 20:11</td>
+                                        <td>41km</td>
+                                        <td>450min</td>
+                                        <td>160kg</td>
+                                        <td>17Km/100kg</td>
+                                        <td>17kg</td>
+                                        <td>17kg</td>
                                     </tr>
                                     <tr>
-                                        <th>156</th>
-                                        <td>exchange</td>
+                                        <th>157</th>
                                         <td>KMFXXXXXXXX123456</td>
                                         <td>QZ FCEV</td>
-                                        <td>XXXXXXXXXXX</td>
-                                        <td>high voltage</td>
-                                        <td>10-31-2022 20:11</td>
+                                        <td>41km</td>
+                                        <td>450min</td>
+                                        <td>160kg</td>
+                                        <td>17Km/100kg</td>
+                                        <td>17kg</td>
+                                        <td>17kg</td>
                                     </tr>
                                     <tr>
-                                        <th>155</th>
-                                        <td>exchange</td>
+                                        <th>157</th>
                                         <td>KMFXXXXXXXX123456</td>
                                         <td>QZ FCEV</td>
-                                        <td>XXXXXXXXXXX</td>
-                                        <td>high voltage</td>
-                                        <td>10-31-2022 20:11</td>
+                                        <td>41km</td>
+                                        <td>450min</td>
+                                        <td>160kg</td>
+                                        <td>17Km/100kg</td>
+                                        <td>17kg</td>
+                                        <td>17kg</td>
                                     </tr>
                                     <tr>
-                                        <th>154</th>
-                                        <td>exchange</td>
+                                        <th>157</th>
                                         <td>KMFXXXXXXXX123456</td>
                                         <td>QZ FCEV</td>
-                                        <td>XXXXXXXXXXX</td>
-                                        <td>high voltage</td>
-                                        <td>10-31-2022 20:11</td>
+                                        <td>41km</td>
+                                        <td>450min</td>
+                                        <td>160kg</td>
+                                        <td>17Km/100kg</td>
+                                        <td>17kg</td>
+                                        <td>17kg</td>
                                     </tr>
                                     <tr>
-                                        <th>153</th>
-                                        <td>exchange</td>
+                                        <th>157</th>
                                         <td>KMFXXXXXXXX123456</td>
                                         <td>QZ FCEV</td>
-                                        <td>XXXXXXXXXXX</td>
-                                        <td>high voltage</td>
-                                        <td>10-31-2022 20:11</td>
+                                        <td>41km</td>
+                                        <td>450min</td>
+                                        <td>160kg</td>
+                                        <td>17Km/100kg</td>
+                                        <td>17kg</td>
+                                        <td>17kg</td>
                                     </tr>
                                     <tr>
-                                        <th>152</th>
-                                        <td>exchange</td>
+                                        <th>157</th>
                                         <td>KMFXXXXXXXX123456</td>
                                         <td>QZ FCEV</td>
-                                        <td>XXXXXXXXXXX</td>
-                                        <td>high voltage</td>
-                                        <td>10-31-2022 20:11</td>
+                                        <td>41km</td>
+                                        <td>450min</td>
+                                        <td>160kg</td>
+                                        <td>17Km/100kg</td>
+                                        <td>17kg</td>
+                                        <td>17kg</td>
                                     </tr>
                                     <tr>
-                                        <th>151</th>
-                                        <td>exchange</td>
+                                        <th>157</th>
                                         <td>KMFXXXXXXXX123456</td>
                                         <td>QZ FCEV</td>
-                                        <td>XXXXXXXXXXX</td>
-                                        <td>high voltage</td>
-                                        <td>10-31-2022 20:11</td>
+                                        <td>41km</td>
+                                        <td>450min</td>
+                                        <td>160kg</td>
+                                        <td>17Km/100kg</td>
+                                        <td>17kg</td>
+                                        <td>17kg</td>
                                     </tr>
                                     <tr>
-                                        <th>150</th>
-                                        <td>exchange</td>
+                                        <th>157</th>
                                         <td>KMFXXXXXXXX123456</td>
                                         <td>QZ FCEV</td>
-                                        <td>XXXXXXXXXXX</td>
-                                        <td>high voltage</td>
-                                        <td>10-31-2022 20:11</td>
+                                        <td>41km</td>
+                                        <td>450min</td>
+                                        <td>160kg</td>
+                                        <td>17Km/100kg</td>
+                                        <td>17kg</td>
+                                        <td>17kg</td>
                                     </tr>
                                     <tr>
-                                        <th>149</th>
-                                        <td>exchange</td>
+                                        <th>157</th>
                                         <td>KMFXXXXXXXX123456</td>
                                         <td>QZ FCEV</td>
-                                        <td>XXXXXXXXXXX</td>
-                                        <td>high voltage</td>
-                                        <td>10-31-2022 20:11</td>
+                                        <td>41km</td>
+                                        <td>450min</td>
+                                        <td>160kg</td>
+                                        <td>17Km/100kg</td>
+                                        <td>17kg</td>
+                                        <td>17kg</td>
                                     </tr>
                                     <tr>
-                                        <th>148</th>
-                                        <td>exchange</td>
+                                        <th>157</th>
                                         <td>KMFXXXXXXXX123456</td>
                                         <td>QZ FCEV</td>
-                                        <td>XXXXXXXXXXX</td>
-                                        <td>high voltage</td>
-                                        <td>10-31-2022 20:11</td>
+                                        <td>41km</td>
+                                        <td>450min</td>
+                                        <td>160kg</td>
+                                        <td>17Km/100kg</td>
+                                        <td>17kg</td>
+                                        <td>17kg</td>
                                     </tr>
                                     <!-- 데이타 없을 시 -->
                                     <tr>
-                                        <td class="nodata" colspan="12">
-                                            <p><i class="tbl-ico-nodata"></i> No search results.</p>
+                                        <td class="nodata" colspan="9">
+                                            <p><i class="tbl-ico-nodata"></i> There are no search results.</p>
                                         </td>
                                     </tr>
                                     <!-- // 데이타 없을 시 -->
@@ -358,19 +372,6 @@
                 </div>
             </div>
         </div>
-        <footer>
-            <div class="logo"><button class="logo-link"><span class="blind">HYUNDAI MOTOR GROUP</span></button></div>
-            <div class="f-link">
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Legal Notice</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Hyundai Worldwide</a></li>
-                    <!-- <li><a href="#">TBD</a></li> -->
-                </ul>
-                <p class="copyright">Copyright 2022 hyundai motor company. All right reserved.</p>
-            </div>
-        </footer>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.2.1/dist/js/coreui.bundle.min.js" crossorigin="anonymous"></script>
