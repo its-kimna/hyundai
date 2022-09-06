@@ -493,7 +493,7 @@ caption {
 .info-mix {
   background: #f7f7f8;
   border-radius: 7px;
-  height: 488px;
+  height: 100%;
   box-sizing: border-box;
   padding-top: 130px;
 }
@@ -1845,8 +1845,8 @@ caption {
   position: relative;
   margin: 0 20px;
 }
-.wrap .content-section .flex-box.fix-size {
-  height: 592px;
+.wrap .content-section .flex-box.fix-size { /*height:592px;*/
+  height: 100%;
   box-sizing: border-box;
 }
 .wrap .content-section .flex-box .btn-group {
@@ -1907,22 +1907,39 @@ caption {
 .wrap .content-section.system-noti > .btn-wrap {
   top: 39px;
 }
-.wrap .content-section .rc-tree-list {
+.wrap .content-section .rc-tree .rc-tree-list {
   max-height: 100%;
   overflow-y: auto;
   border: 1px solid #e5e5e5;
 }
-.wrap .content-section .rc-tree-list .rc-tree-treenode {
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode {
+  position: relative;
   height: 49px;
   line-height: 49px;
   position: relative;
   display: flex;
 }
-.wrap .content-section .rc-tree-list .rc-tree-treenode > * {
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode > * {
   vertical-align: middle;
   display: inline-block;
+  background: none;
 }
-.wrap .content-section .rc-tree-list .rc-tree-treenode .rc-tree-draggable-icon {
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .rc-tree-node-selected {
+  background-color: #fff;
+  box-shadow: none;
+  opacity: 1;
+}
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .rc-tree-node-content-wrapper {
+  display: flex;
+  flex: 1;
+  order: 2;
+  width: unset;
+  height: 49px;
+  align-items: center;
+  justify-content: center;
+}
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .rc-tree-draggable-icon {
+  order: 1;
   display: inline-block;
   width: 14px;
   height: 18px;
@@ -1932,7 +1949,20 @@ caption {
   margin: 15px 0 0 4px;
   order: 1;
 }
-.wrap .content-section .rc-tree-list .rc-tree-treenode .rc-tree-switcher_open {
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .rc-tree-switcher {
+  margin-right: 0;
+  height: 20px;
+  order: 1;
+  width: 16px;
+}
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .rc-tree-switcher.rc-tree-switcher-noop {
+  flex: 0 0 45px;
+  width: 16px;
+  margin-right: 0;
+  height: 20px;
+  order: 6;
+}
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .rc-tree-switcher.rc-tree-switcher_close {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -1944,8 +1974,34 @@ caption {
   margin: 10px 15px 0 0;
   flex: 0 0 30px;
 }
-.wrap .content-section .rc-tree-list .rc-tree-treenode .rc-tree-switcher_open:after {
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .rc-tree-switcher.rc-tree-switcher_close:after {
   content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #76808c;
+  border-left: 0;
+  border-top: 0;
+  transform: rotate(225deg);
+}
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .rc-tree-switcher.rc-tree-switcher_open {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  position: relative;
+  order: 4;
+  margin: 10px 15px 0 0;
+  flex: 0 0 30px;
+}
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .rc-tree-switcher.rc-tree-switcher_open:after {
+  content: "";
+  display: inline-block;
   position: absolute;
   top: 8px;
   left: 8px;
@@ -1956,43 +2012,52 @@ caption {
   border-top: 0;
   transform: rotate(45deg);
 }
-.wrap .content-section .rc-tree-list .rc-tree-treenode .rc-tree-switcher-noop, .wrap .content-section .rc-tree-list .rc-tree-treenode .rc-tree-switcher_close {
-  order: 4;
-  flex: 0 0 45px;
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .rc-tree-node-content-wrapper-open {
+  padding-left: 20px;
 }
-.wrap .content-section .rc-tree-list .rc-tree-treenode .rc-tree-title {
-  order: 2;
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .rc-tree-node-content-wrapper-close {
+  padding-left: 20px;
+}
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .rc-tree-indent-unit {
+  width: 0;
+}
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .rc-tree-title {
+  order: 1;
   margin-left: 15px;
 }
-.wrap .content-section .rc-tree-list .rc-tree-treenode .rc-tree-icon__customize {
-  order: 3;
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .rc-tree-iconEle {
+  display: flex;
+  order: 2;
+}
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .rc-tree-icon__customize {
   flex: 1;
 }
-.wrap .content-section .rc-tree-list .rc-tree-treenode .customize-icon {
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .customize-icon {
   background: none;
   width: 100%;
   height: 100%;
 }
-.wrap .content-section .rc-tree-list .rc-tree-treenode .customize-icon:before {
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode .customize-icon:before {
   display: none;
 }
-.wrap .content-section .rc-tree-list .rc-tree-treenode ~ .rc-tree-treenode {
+.wrap .content-section .rc-tree .rc-tree-list .rc-tree-treenode ~ .rc-tree-treenode {
   border-top: 1px solid #e5e5e5;
 }
-.wrap .content-section .rc-tree-list .btn-box {
+.wrap .content-section .rc-tree .rc-tree-list .btn-box {
   float: right;
   margin-right: 15px;
+  width: 56px;
 }
-.wrap .content-section .rc-tree-list .btn-box > * {
+.wrap .content-section .rc-tree .rc-tree-list .btn-box > * {
   vertical-align: middle;
 }
-.wrap .content-section .rc-tree-list .btn-box .btn-add {
-  display: inline-block;
+.wrap .content-section .rc-tree .rc-tree-list .btn-box .btn-add {
+  float: left;
   width: 20px;
   height: 20px;
   position: relative;
 }
-.wrap .content-section .rc-tree-list .btn-box .btn-add:before {
+.wrap .content-section .rc-tree .rc-tree-list .btn-box .btn-add:before {
   width: 18px;
   height: 2px;
   background: #76808c;
@@ -2001,7 +2066,7 @@ caption {
   left: 1px;
   content: "";
 }
-.wrap .content-section .rc-tree-list .btn-box .btn-add:after {
+.wrap .content-section .rc-tree .rc-tree-list .btn-box .btn-add:after {
   width: 2px;
   height: 18px;
   background: #76808c;
@@ -2010,8 +2075,8 @@ caption {
   left: 9px;
   content: "";
 }
-.wrap .content-section .rc-tree-list .btn-box .btn-del {
-  display: inline-block;
+.wrap .content-section .rc-tree .rc-tree-list .btn-box .btn-del {
+  float: right;
   width: 20px;
   height: 20px;
   background: url("../assets/images/ico-delete.svg") no-repeat 50% 50%/18px auto;
