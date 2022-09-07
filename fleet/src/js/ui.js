@@ -34,6 +34,15 @@ $(function(){
         $('aside').removeClass('close');
         $('.btn-aside-close').removeClass('btn-aside-open').addClass('btn-aside-close');
     }
+
+    // all체크
+    $(".allcheck").on('click', function(e){
+		if($(this).is(":checked")){
+            $(this).parents('.accordion-header').siblings('.accordion-collapse').children().find('input').prop('checked',true);
+		}else{
+			$(this).parents('.accordion-header').siblings('.accordion-collapse').children().find('input').prop('checked',false);
+		}
+	});
     
 })
 

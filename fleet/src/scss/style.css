@@ -732,6 +732,51 @@ input::placeholder {
 .form-check-list .form-check .form-check-input[type=checkbox]:checked {
   border-color: #2d6894;
 }
+.form-check-list .form-check.large .form-check-input[type=checkbox] {
+  border: none;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  top: 6px;
+  position: relative;
+  box-shadow: none;
+  border-radius: 50%;
+  background: url("../assets/images/ico-check-large-off.svg") no-repeat 50% 50%/100% 100%;
+}
+.form-check-list .form-check.large .form-check-input[type=checkbox]:checked {
+  background: url("../assets/images/ico-check-large-on.svg") no-repeat 50% 50%/100% 100%;
+}
+.form-check-list .form-check.large .form-check-input[type=checkbox]:disabled {
+  background: url("../assets/images/ico-check-large-disabled.svg") no-repeat 50% 50%/100% 100%;
+}
+.form-check-list .form-check.small {
+  line-height: 20px;
+}
+.form-check-list .form-check.small .form-check-input[type=checkbox] {
+  border: none;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  top: -4px;
+  position: relative;
+  box-shadow: none;
+  border-radius: 50%;
+  background: url("../assets/images/ico-check-small-off.svg") no-repeat 50% 50%/100% 100%;
+}
+.form-check-list .form-check.small .form-check-input[type=checkbox]:checked {
+  background: url("../assets/images/ico-check-small-on.svg") no-repeat 50% 50%/100% 100%;
+}
+.form-check-list .form-check.small .form-check-input[type=checkbox]:disabled {
+  background: url("../assets/images/ico-check-small-disabled.svg") no-repeat 50% 50%/100% 100%;
+}
+.form-check-list .form-check.small .form-check-label {
+  font-size: 15px;
+  color: #000;
+  line-height: 20px;
+}
+.form-check-list .form-check ~ .form-check {
+  margin-left: 38px;
+}
 
 .form-check-input[type=checkbox] {
   border-radius: 0;
@@ -6538,6 +6583,9 @@ input::placeholder {
   padding: 20px;
 }
 .wrap .popup-wrap.medium-popup {
+  max-height: calc(100vh - 220px);
+  overflow-x: hidden;
+  overflow-y: auto;
   width: 480px;
   border-radius: 4px;
 }
@@ -6558,6 +6606,9 @@ input::placeholder {
 .wrap .popup-wrap.large-popup {
   padding: 30px;
   width: 600px;
+  max-height: calc(100vh - 220px);
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .wrap .popup-wrap.large-popup .title-popup {
   display: inline-block;
@@ -6568,6 +6619,26 @@ input::placeholder {
 .wrap .popup-wrap.large-popup > .popup-content {
   margin-top: 0;
   padding: 20px 0 0;
+}
+.wrap .popup-wrap.large-popup > .popup-content .box-gray .tit {
+  font-size: 20px;
+  color: #000;
+  line-height: 25px;
+  height: 25px;
+}
+.wrap .popup-wrap.large-popup > .popup-content .box-gray .tit + .info-flex {
+  display: flex;
+  gap: 34px;
+  margin-top: 4px;
+  font-size: 15px;
+  line-height: 19px;
+}
+.wrap .popup-wrap.large-popup > .popup-content .box-gray .tit + .info-flex li span {
+  color: #999;
+}
+.wrap .popup-wrap.large-popup > .popup-content .box-gray .tit + .info-flex li span + span {
+  color: #000;
+  padding-left: 10px;
 }
 .wrap .popup-wrap.large-popup > .popup-content .box-gray ul.list li {
   display: flex;
@@ -6637,6 +6708,23 @@ input::placeholder {
   text-decoration: underline;
   font-family: verdana;
 }
+.wrap .popup-wrap.large-popup .accordion .accordion-item.active {
+  box-shadow: none;
+  border: solid 1px #e5e5e5;
+  border-radius: 0;
+  background: #ebf6ff;
+}
+.wrap .popup-wrap.large-popup .accordion .accordion-item .accordion-collapse:before {
+  content: "";
+  display: block;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+.wrap .popup-wrap.large-popup .accordion .accordion-body {
+  padding: 10px 0 13px 30px;
+}
 .wrap .popup-wrap .title-popup {
   font-size: 30px;
   color: #2c3238;
@@ -6700,12 +6788,15 @@ input::placeholder {
   font-weight: 500;
 }
 .wrap .popup-wrap .popup-content h2.accordion-header {
-  padding: 0px;
-  height: 49px;
+  padding: 0px 20px;
+  height: 46px;
+}
+.wrap .popup-wrap .popup-content h2.accordion-header .form-check-list .form-check {
+  display: flex;
 }
 .wrap .popup-wrap .popup-content h2.accordion-header .accordion-button {
   padding: 0;
-  margin-bottom: 10px;
+  line-height: 46px;
   font-size: 18px;
   color: #000000;
   font-weight: 500;
@@ -6744,11 +6835,17 @@ input::placeholder {
   outline: 0;
   box-shadow: none;
 }
+.wrap .popup-wrap .accordion-button:after {
+  background-image: var(--cui-accordion-button-active-icon, url("../assets/images/btn-down.svg"));
+}
 .wrap .popup-wrap .accordion-button:not(.collapsed) {
   color: #000;
   font-weight: 500;
   box-shadow: none;
   background-color: #fff;
+}
+.wrap .popup-wrap .accordion-button:not(.collapsed):after {
+  background-image: var(--cui-accordion-button-active-icon, url("../assets/images/btn-down.svg"));
 }
 .wrap .popup-wrap .btn-close {
   position: absolute;
