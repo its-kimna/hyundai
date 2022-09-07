@@ -94,6 +94,9 @@ caption{overflow:hidden;margin-left:-9999px;width:1px;height:1px;font-size:1px;l
         }
         
     }
+    &.btn-secondary {background:#0099cb;color:#fff;
+        &:hover{background:#67c7e6;}
+    }
     &.btn-short {
         height:32px;font-size:14px;line-height:32px;min-width: 90px;
     }
@@ -215,6 +218,19 @@ caption{overflow:hidden;margin-left:-9999px;width:1px;height:1px;font-size:1px;l
         }
     }
 }
+
+/* front */
+.front {position: fixed;top: 0;left: 0;min-width: 1024px;min-height: 100%;width:100%;height: auto; background:url($assetPath + "bg_uptime.png") no-repeat center center;background-size:cover;
+    .section {width:986px;margin-left:50px;padding:124px 46px 48px;background:rgba(255, 255, 255, 0.4);
+        h1 {font-size:0;width:289px;height:117px;margin-bottom:40px; background:url($assetPath + "logo_uptime.png") no-repeat 0 0/100% auto;}
+        strong {margin-bottom:30px;font-size:28px;line-height: 28px;}
+        p {font-size:24px;line-height:30px;}
+        .btn-front-group {text-align:left;margin-top:40px;
+            button {width:175px;height:45px;line-height:45px;margin-right:20px;font-size:17px;padding:0;border-radius:0;box-shadow: none !important;}
+        }
+    }
+}
+
 
 /* intro */
 .intro{padding-bottom:130px;background:$bg-color;

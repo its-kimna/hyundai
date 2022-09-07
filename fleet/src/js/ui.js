@@ -5,6 +5,7 @@ $(function(){
     if ($('.btn-tooltip').length > 0) {tooltip();}
     if ($('.activation-status').length > 0) {contentFull();}
     if ($('.accordion').length > 0) {accordionBox();}
+    if ($('.filebox').length > 0) {filebox();}
     
     
     //aside
@@ -91,3 +92,17 @@ function accordionBox(){
         }
     })
 }
+function filebox(){
+
+    var fileTarget = $('.filebox .upload-hidden');
+  
+    fileTarget.on('change', function(){
+        if(window.FileReader){
+            var filename = $(this)[0].files[0].name;
+        } else {
+            var filename = $(this).val().split('/').pop().split('\\').pop();
+        }
+
+        $(this).siblings('.upload-name').val(filename);
+    });
+} 
