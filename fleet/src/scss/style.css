@@ -195,6 +195,31 @@ caption {
   color: #000;
 }
 
+.col-good {
+  color: #81c29a;
+  font-weight: bold;
+}
+
+.col-DangerA {
+  color: #da3732;
+  font-weight: bold;
+}
+
+.col-DangerB {
+  color: #e89261;
+  font-weight: bold;
+}
+
+.col-DangerC {
+  color: #f5d663;
+  font-weight: bold;
+}
+
+.col-Unknown {
+  color: #909bb9;
+  font-weight: bold;
+}
+
 .mt0 {
   margin-top: 0 !important;
 }
@@ -209,6 +234,14 @@ caption {
 
 .mt30 {
   margin-top: 30px !important;
+}
+
+.mr10 {
+  margin-right: 10px !important;
+}
+
+.pt0 {
+  padding-top: 0 !important;
 }
 
 .nav-link {
@@ -380,10 +413,24 @@ input::placeholder {
 .tbl-btn-group {
   text-align: right;
 }
-.tbl-btn-group select {
+.tbl-btn-group .form-select-wrap {
   display: inline-block;
+}
+.tbl-btn-group .form-select-wrap label {
+  display: inline-block;
+  padding-right: 12px;
+  font-family: HyundaiSansTextOffice;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  color: #000;
+  line-height: 1.33;
+}
+.tbl-btn-group .form-select-wrap select {
   width: 86px;
-  margin-right: 6px;
+  height: 40px;
+  border: 1px solid #dddbda;
 }
 .tbl-btn-group .btn ~ .btn {
   margin-left: 8px;
@@ -624,7 +671,7 @@ input::placeholder {
 }
 
 .info-mix {
-  background: #f7f7f8;
+  background: #e5e5e5;
   border-radius: 7px;
   height: 488px;
   box-sizing: border-box;
@@ -649,6 +696,36 @@ input::placeholder {
   font-weight: 500;
   text-align: center;
   margin-top: 38px;
+}
+
+.info-full {
+  background: #fafaf9;
+  border: 1px solid #e5e5e5;
+  height: 212px;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+.info-full .img-area {
+  display: block;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background: #fff;
+  overflow: hidden;
+}
+.info-full .img-area img {
+  width: 100%;
+  height: auto;
+}
+.info-full p {
+  font-family: HyundaiSansTextOffice;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
 }
 
 .graph-color-info {
@@ -1517,6 +1594,10 @@ input::placeholder {
 .wrap aside .menu > li .depth .link-menu:after {
   display: none;
 }
+.wrap aside .menu > li .depth li.on button {
+  color: #fff;
+  font-weight: bold;
+}
 .wrap aside .btn-aside {
   position: absolute;
   left: 250px;
@@ -1644,9 +1725,18 @@ input::placeholder {
 .wrap .search-wrap .group-box.half {
   width: 50%;
 }
-.wrap .search-wrap .group-box.size .inp-group { /* flex:0 0 25%; */ }
+.wrap .search-wrap .group-box.size {
+  width: calc(100% - 60px);
+}
 .wrap .search-wrap .group-box.size .inp-group.hasbtn {
   flex: 1;
+}
+.wrap .search-wrap .group-box.hasbtn .btn-search {
+  margin-top: 23px;
+  vertical-align: top;
+}
+.wrap .search-wrap .group-box.hasbtn .btn-search .btn {
+  margin-left: 0px;
 }
 .wrap .search-wrap .group-box > .flex-box.col3 {
   gap: 20px;
@@ -1725,10 +1815,6 @@ input::placeholder {
   width: calc(100% - 50px);
   display: inline-block;
 }
-.wrap .search-wrap .inp-group.hasbtn .btn-search {
-  display: inline-block;
-  vertical-align: top;
-}
 .wrap .search-wrap .datepicker-wrap {
   display: inline-block;
   vertical-align: top;
@@ -1803,12 +1889,6 @@ input::placeholder {
 .wrap .search-wrap .period .btn-check:checked + .btn-secondary {
   background-color: #2d6894;
   color: #fff;
-}
-.wrap .search-wrap .btn-search {
-  display: flex;
-}
-.wrap .search-wrap .btn-search .btn {
-  margin-left: 10px;
 }
 .wrap .search-wrap.type02 {
   display: block;
