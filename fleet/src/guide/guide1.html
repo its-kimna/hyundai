@@ -18,6 +18,45 @@
 <body>
 	<div class="guide-wrap wrap">
 		<div class="guide-content">
+			<h2>header</h2>
+			<header>
+				<div class="section">
+					<h1 class="logo"><button class="logo-link"><span class="blind">bluelink Fleet</span></button></h1>
+					<div class="util">
+						<div class="dropdown">
+							<button class="link dropdown-toggle" type="button" data-coreui-toggle="dropdown" aria-expanded="false">
+								Germany
+							</button>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">Germany</a></li>
+								<li><a class="dropdown-item" href="#">Korean</a></li>
+								<li><a class="dropdown-item" href="#">English</a></li>
+							</ul>
+						</div>
+						<button class="link"><span>Hyundai Motor Group / John smith</span></button>
+						<div>
+							<button class="link"><i class="ico-alram"></i></button>
+							<button class="link"><i class="ico-logout"></i></button>
+						</div>
+					</div>
+				</div>
+			</header>
+			<hr>
+			<h2>footer</h2>
+			<footer>
+				<div class="logo"><button class="logo-link"><span class="blind">HYUNDAI MOTOR GROUP</span></button></div>
+				<div class="f-link">
+					<ul>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Legal Notice</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Hyundai Worldwide</a></li>
+						<!-- <li><a href="#">TBD</a></li> -->
+					</ul>
+					<p class="copyright">Copyright 2022 hyundai motor company. All right reserved.</p>
+				</div>
+			</footer>
+			<hr>
 			<h2>form</h2>
 			<div class="form-section">
 				<form>
@@ -125,7 +164,7 @@
 					</div>
 				</form>
 			</div>
-
+			<hr>
             <h2>button</h2>
 			<div class="btn-wrap">
 				<button type="button" class="btn btn-outline-secondary">Cancel</button>
@@ -136,7 +175,7 @@
 				<button type="button" class="btn btn-outline-secondary btn-sm btn-tbl">Cancel</button>
 				<button class="btn btn-primary btn-sm btn-tbl" type="submit">Modify</button>
 			</div>
-
+			<hr>
             <h2>상단 검색영역 -  9/13 구조 변경</h2>
 			<div class="search-wrap type02">
 				<div class="group-box mt0 hasbtn">
@@ -421,6 +460,54 @@
 								<option value="2">Two</option>
 								<option value="3">Three</option>
 							</select>
+						</div>
+					</div>
+					<div class="btn-search">
+						<button type="button" class="btn btn-primary ico-search"><span class="blind">검색</span></button>
+					</div>
+				</div>
+			</div>
+
+			<hr>
+			<div class="search-wrap">
+				<div class="group-box half">
+					<div class="inp-group no-label">
+						<div class="period">
+							<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+							<label class="btn btn-secondary" for="option1">1 Week</label>
+							
+							<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+							<label class="btn btn-secondary" for="option2">1 Month</label>
+							
+							<input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+							<label class="btn btn-secondary" for="option3">6 Month</label>
+							
+							<input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+							<label class="btn btn-secondary" for="option4">1 Year</label>
+						</div>
+					</div>
+					<div class="inp-group">
+						<div class="datepicker-wrap">
+							<div data-coreui-locale="en-US" data-coreui-toggle="date-range-picker"></div>
+						</div>
+					</div>
+				</div>
+				<div class="group-box hasbtn">
+					<div class="col2">
+						<div class="inp-group">
+							<label for="inp6" class="form-label">Recipient group</label>
+							<div class="form-select-wrap">
+								<select class="form-select" id="inp6">
+									<option selected>Open this select menu</option>
+									<option value="1">One</option>
+									<option value="2">Two</option>
+									<option value="3">Three</option>
+								</select>
+							</div>
+						</div>
+						<div class="inp-group w70">
+							<label for="inp1" class="form-label">Keyword</label>
+							<input type="text" class="form-control" id="inp1" placeholder="Enter Keyword">
 						</div>
 					</div>
 					<div class="btn-search">

@@ -2,6 +2,7 @@ $(function(){
     if ($('.menu-list').length > 0) {menuList();}
     if ($('.datepicker-wrap').length > 0) {datepickerIcon();}
     if ($('.default-swiper').length > 0) {defaultSwiper();}
+    if ($('.col3-swiper').length > 0) {col3Swiper();}
     if ($('.btn-tooltip').length > 0) {tooltip();}
     if ($('.activation-status').length > 0) {contentFull();}
     if ($('.accordion').length > 0) {accordionBox();}
@@ -43,7 +44,7 @@ $(function(){
 			$(this).parents('.accordion-header').siblings('.accordion-collapse').children().find('input').prop('checked',false);
 		}
 	});
-    
+
 })
 
 function defaultSwiper(){
@@ -55,6 +56,25 @@ function defaultSwiper(){
         },
     });
 }
+
+function col3Swiper(){
+    var swiper = new Swiper(".col3-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 0,
+        slidesPerGroup: 3,
+        loop: false,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+}
+
 
 function datepickerIcon(){
     setTimeout(function(){
