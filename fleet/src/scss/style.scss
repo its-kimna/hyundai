@@ -52,6 +52,7 @@ caption{overflow:hidden;margin-left:-9999px;width:1px;height:1px;font-size:1px;l
 .esse-text{color:$col-strong;
     .esse:before{margin:0 3px 0 0}
 }
+.form-select:disabled {background-color:#ecebea;border:1px solid #dddbda;}
 .form-control{border-color:#dddbda;border-radius:0 !important;
     &:focus{box-shadow:none;border-color:$col-default}
 }
@@ -228,12 +229,17 @@ input::placeholder{color:$col-lightGray3}
     &.bottom{display:inline-block;position:static !important;margin-top:5px}
 }
 
-.info-mix{background:#e5e5e5;border-radius:7px;height:488px;box-sizing:border-box;padding-top:130px;
-    .img-area{display:block;width:100px;height:100px;border-radius:50%;margin:0 auto;background:#e5e9f4;overflow:hidden;
+.info-mix{background:#fff;min-height:488px;box-sizing:border-box;padding-top:130px;
+    .img-area{display:block;width:100px;height:100px;border-radius:50%;margin:0 auto;background:#fff;overflow:hidden;
         img{width:100%;height:auto}
     }
-    p{color:$col-lightGray2;font-size:18px;font-weight:500;text-align:center;margin-top:38px}
+    p{color:#333;font-size:18px;font-weight:500;text-align:center;margin-top:38px}
+    &.flex-column {display:flex;flex-direction: column; justify-content: center;align-items: center;padding-top:0;}
 }
+
+
+
+
 .info-full{background:#fafaf9; border:1px solid #e5e5e5;height:212px;box-sizing:border-box;padding-top:40px;
     .img-area{display:block;width:90px;height:90px;border-radius:50%;margin:0 auto;background:#fff;overflow:hidden;
         img{width:100%;height:auto}
@@ -253,7 +259,7 @@ input::placeholder{color:$col-lightGray3}
     }
 }
 
-.form-check-list{color:$col-default;font-size:16px;
+.form-check-list{color:$col-default;font-size:13px;
     .form-check{display:inline-block;line-height:40px;
         ~ .form-check{margin-left:38px}
         .form-check-input[type="radio"]{border-color:$col-lightGray;background:$col-white;width:18px;height:18px;margin-right:8px;top:6px;position:relative;
@@ -280,7 +286,7 @@ input::placeholder{color:$col-lightGray3}
             }
             .form-check-label {font-size:15px;color:#000;line-height:20px;}
         }
-        ~ .form-check{margin-left:38px}
+        ~ .form-check{margin-left:20px}
         
     }
 }
@@ -538,7 +544,7 @@ input::placeholder{color:$col-lightGray3}
         .section{margin-top:40px}
     }
 
-    .stitle{font-size:16px;font-weight:500}
+    .stitle{font-size:15px;font-weight:500}
     .col-point3{color:$col-point2}
 
     .search-wrap{display:block;width:100%;padding:20px 30px;font-size:0;border:1px solid $col-lightGray;background-color:$bg-color2;
@@ -689,7 +695,7 @@ input::placeholder{color:$col-lightGray3}
     .swiper-button-next, .swiper-button-prev {display:flex;width:30px;height:30px;margin-top:0;color:#b0adab;border:1px solid #e5e5e5;z-index:1000;}
     .swiper-button-next:after, .swiper-button-prev:after {font-size:12px;}
 
-    .flex-box{padding:0;display:flex;width:100%;  
+    .flex-box{padding:0;display:flex;width:100%;gap:20px;
         .flex-items{flex:1;width:20%;height:108px;padding:10px 22.5px;border:1px solid $col-lightGray;background:$bg-color;
             .ico-status{display:inline-block;padding-top:36px;font-weight:500;font-style:normal;width:48px;height:48px;background-color:#d9d9d9}
         }
@@ -725,8 +731,8 @@ input::placeholder{color:$col-lightGray3}
                 }
             }
         }
-        .flex-item{border-radius:0px;flex:1;position:relative;padding:17px 0 17px 125px;box-sizing:border-box;
-            
+        .flex-item{border-radius:0px;flex:1;position:relative;padding: 30px;box-sizing:border-box;border:1px solid #e5e5e5;
+                &.flex-sm {background-color:#fafaf9;}
                 // &:after{content:"";width:36px;height:36px;border-radius:50%;position:absolute;top:-2px;left:50%;transform:translateX(-50%)}
                 // &.status-good{color:$col-hover;
                 //     &:after{background:url($assetPath+"ico-good.svg") no-repeat 50% 50%/100% auto}
@@ -776,6 +782,86 @@ input::placeholder{color:$col-lightGray3}
         .edit-control{position:absolute;top:26px;right:26px;
             .btn-edit{display:inline-block;width:20px;height:20px;background:url($assetPath + "ico-edit-black.svg") no-repeat 50% 50%/16px auto}
             .btn-del{display:inline-block;width:20px;height:20px;background:url($assetPath + "ico-del.svg") no-repeat 50% 50%/16px auto;margin-left:11px}
+        }
+    }
+
+    .vin-list {
+        .vin-wrap {
+            .stitle {height: 20px;line-height: 16px; margin: 0 0 18px;}
+            .vin-no-list {
+                li {border:1px solid #e5e5e5;margin-top:10px;background-color:#fff;
+                    &:first-child {margin-top:0;}
+                    a {display:flex;padding:20px 0;
+                        .no {width:86px;text-align:center;font-size:15px;color:#000;    line-height: 46px;}
+                        .vin-info-list {margin-left:0;flex:1;
+                            strong {color:#000;font-size:20px;line-height:25px;margin-bottom:5px;}
+                            p {
+                                span {display:inline-block;font-size:15px;color:#999;
+                                    &:after {content:'';display:inline-block;width:1px;height:15px;background-color:#e5e5e5;vertical-align: middle;margin:0 10px;}
+                                    &:last-child{
+                                        &:after {display:none;}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.active {
+                        background-color:#ebf6ff; border:1px solid #b3cee1;
+                    }
+                    &:hover {
+                        background-color:#ebf6ff; border:1px solid #b3cee1;
+                    }
+                    &.nodata {height:200px;text-align: center;padding: 70px 0;font-size: 18px;color: #adb5bd;background-color:#fff;
+                        p {line-height: 40px;
+                            .ico-nodata {display: inline-block;width: 48px;height: 48px;border-radius: 50%;margin-right: 22px;vertical-align: middle;background: #f2f0ee url(../assets/images/ico-nodata.svg) no-repeat 50% 50%/24px auto;
+                            }
+                        }
+                        &:hover {
+                            background-color:#fff; border:1px solid #e5e5e5;
+                        }
+                    }
+                }
+            }
+            
+        }
+        .vin-detail {
+            .edit-control{position:absolute;top:37px;right:37px;
+                .btn-edit{display:inline-block;width:20px;height:20px;background:url($assetPath + "ico-edit-black.svg") no-repeat 50% 50%/16px auto}
+                .btn-del{display:inline-block;width:20px;height:20px;background:url($assetPath + "ico-del.svg") no-repeat 50% 50%/16px auto;margin-left:11px}
+            }
+            .title {font-size:24px;color:#000;
+                span {display:inlnie-block;font-size:15px;color:#999;margin-right:5px;}
+            }
+            .list-text {margin:10px 0 20px;padding:20px;border:1px solid #e5e5e5;background-color: #fafaf9;
+                >li {display:flex;line-height:19px;margin-top:10px;
+                    &:first-child {margin-top:0;}
+                    .title {flex:0 0 160px;width:160px;font-size:15px;color:#999;}
+                    .text {font-size:15px;color:#000;line-height:19px;}
+                }
+                
+            }
+            .etc {
+                .list-text {margin:0px 0 0px;padding:0;border:none;background-color: #fff;
+                    >li {display:flex;line-height:24px;margin-top:20px;
+                        &:first-child {margin-top:0;}
+                        .title {flex:0 0 130px;width:130px;font-size:15px;color:#333; font-weight:600;line-height:18px;padding:3px 0;}
+                        .text {font-size:15px;color:#333;line-height:24px;}
+                    }
+                    
+                }
+                &.edit {
+                    .list-text {
+                        >li {margin-top:20px;min-height: 40px;
+                            &:first-child {margin-top:0;}
+                            .title {padding:11px 0;height: 40px;}
+                            .text {
+                                .form-select-wrap {flex:1;}
+                                &.flex-box {display:flex;gap:10px;}
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 

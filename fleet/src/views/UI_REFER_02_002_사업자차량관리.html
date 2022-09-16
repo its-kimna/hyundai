@@ -45,9 +45,9 @@
                             <li><button class="link-menu">VIN List</button></li>
                         </ul>
                     </li>
-                    <li class="on"><button class="link-menu"><i class="ico-menu04"></i><span>DTC Code</span></button>
+                    <li><button class="link-menu"><i class="ico-menu04"></i><span>DTC Code</span></button>
                         <ul class="depth">
-                            <li class="on"><button class="link-menu">DTC Code</button></li>
+                            <li><button class="link-menu">DTC Code</button></li>
                             <li><button class="link-menu">DTC Status Check</button></li>
                             <li><button class="link-menu">Monthly Report History</button></li>
                         </ul>
@@ -66,10 +66,10 @@
                             <li><button class="link-menu">Q&A</button></li>
                         </ul>
                     </li>
-                    <li><button class="link-menu"><i class="ico-menu09"></i><span>Reference Info.</span></button>
+                    <li class="on"><button class="link-menu"><i class="ico-menu09"></i><span>Reference Info.</span></button>
                         <ul class="depth">
                             <li><button class="link-menu">Vehicle Mgt.</button></li>
-                            <li><button class="link-menu">Business Vehicle Mgt.</button></li>
+                            <li class="on"><button class="link-menu">Business Vehicle Mgt.</button></li>
                             <li><button class="link-menu">Provisioning Mgt.</button></li>
                             <li><button class="link-menu">Fleet Vehicle Group Mgt.</button></li>
                             <li><button class="link-menu">Maintenance Mgt.</button></li>
@@ -95,37 +95,15 @@
             <div class="content">
                 <div class="w-content">
                     <div class="title-area">
-                        <h3 class="page-title">DTC Code</h3>
+                        <h3 class="page-title">Business Vehicle Mgt.</h3>
                     </div>
 
                     <div class="search-wrap">
-                        <div class="group-box half">
-                            <div class="inp-group no-label">
-                                <div class="period">
-                                    <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-                                    <label class="btn btn-secondary" for="option1">1 Week</label>
-                                    
-                                    <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-                                    <label class="btn btn-secondary" for="option2">1 Month</label>
-                                    
-                                    <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
-                                    <label class="btn btn-secondary" for="option3">6 Month</label>
-                                    
-                                    <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
-                                    <label class="btn btn-secondary" for="option4">1 Year</label>
-                                </div>
-                            </div>
-                            <div class="inp-group">
-                                <div class="datepicker-wrap">
-                                    <div data-coreui-locale="en-US" data-coreui-toggle="date-range-picker"></div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="group-box size">
                             <div class="inp-group">
                                 <label for="inp6" class="form-label">Corporation</label>
                                 <div class="form-select-wrap">
-                                    <select class="form-select" id="inp6">
+                                    <select class="form-select" id="inp6" disabled>
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -136,7 +114,7 @@
                             <div class="inp-group">
                                 <label for="inp7" class="form-label">Fleet</label>
                                 <div class="form-select-wrap">
-                                    <select class="form-select" id="inp7">
+                                    <select class="form-select" id="inp7" disabled>
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -155,12 +133,23 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="inp-group">
+                                <label for="inp22" class="form-label">Vehicle type</label>
+                                <div class="form-select-wrap">
+                                    <select class="form-select" id="inp22">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                         <div class="group-box hasbtn">
                             <div class="inp-group">
-                                <label for="inp6" class="form-label">Grade</label>
+                                <label for="inp4" class="form-label">Sale/Lease</label>
                                 <div class="form-select-wrap">
-                                    <select class="form-select" id="inp6">
+                                    <select class="form-select" id="inp4">
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -169,9 +158,9 @@
                                 </div>
                             </div>
                             <div class="inp-group">
-                                <label for="inp7" class="form-label">Status</label>
+                                <label for="inp8" class="form-label">Fleet Allocation</label>
                                 <div class="form-select-wrap">
-                                    <select class="form-select" id="inp7">
+                                    <select class="form-select" id="inp8">
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
@@ -180,15 +169,19 @@
                                 </div>
                             </div>
                             <div class="inp-group">
-                                <label for="inp3" class="form-label">VIN No.</label>
+                                <label for="inp1" class="form-label">GPS reception</label>
                                 <div class="form-select-wrap">
-                                    <select class="form-select" id="inp3">
+                                    <select class="form-select" id="inp1">
                                         <option selected>Open this select menu</option>
                                         <option value="1">One</option>
                                         <option value="2">Two</option>
                                         <option value="3">Three</option>
                                     </select>
                                 </div>
+                            </div>
+                            <div class="inp-group">
+                                <label for="inp2" class="form-label">VIN</label>
+                                <input type="text" class="form-control" id="inp2" placeholder="placeholder">
                             </div>
                             <div class="btn-search">
                                 <button type="button" class="btn btn-primary ico-search"><span class="blind">검색</span></button>
@@ -197,169 +190,478 @@
                     </div>
 
                     <div class="section">
-                        <div class="table-wrap">
-                            <h4 class="stitle">Result <span class="col-point3">157</span></h4>
-                            <div class="tbl-btn-group">
-                                <button type="button" class="btn btn-outline-secondary btn-sm ico-down">Excel Download</button>
+                        <div class="vin-list">
+                            <div class="flex-box">
+                                <div class="flex-item flex-sm">
+                                    <div class="vin-wrap">
+                                        <h4 class="stitle">Result <span class="col-point3">157</span></h4>
+                                        <ul class="vin-no-list">
+                                            <li class="active">
+                                                <a href="#">
+                                                    <span class="no">150</span>
+                                                    <div class="vin-info-list">
+                                                        <strong>KMFXXXXXXXX123456</strong>
+                                                        <p>
+                                                            <span>QZ FCEV</span>
+                                                            <span>Company Name01</span>
+                                                            <span>Lease</span>
+                                                            <span>PIMM119</span>
+                                                            <span>GPS Reception [YES]</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="no">150</span>
+                                                    <div class="vin-info-list">
+                                                        <strong>KMFXXXXXXXX123456</strong>
+                                                        <p>
+                                                            <span>QZ FCEV</span>
+                                                            <span>Company Name01</span>
+                                                            <span>Lease</span>
+                                                            <span>PIMM119</span>
+                                                            <span>GPS Reception [YES]</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="no">150</span>
+                                                    <div class="vin-info-list">
+                                                        <strong>KMFXXXXXXXX123456</strong>
+                                                        <p>
+                                                            <span>QZ FCEV</span>
+                                                            <span>Company Name01</span>
+                                                            <span>Lease</span>
+                                                            <span>PIMM119</span>
+                                                            <span>GPS Reception [YES]</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="nodata">
+                                                <p><i class="ico-nodata"></i> No search results.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="align-center">
+                                        <div class="pagination-wrap">
+                                            <div class="pagination">
+                                                <span class="page-item">
+                                                    <a class="page-link page-first" href="#" aria-label="first">
+                                                        <span aria-hidden="true"></span>
+                                                    </a>
+                                                </span>
+                                                <span class="page-item">
+                                                    <a class="page-link page-prev" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true"></span>
+                                                    </a>
+                                                </span>
+                                                <span class="page-item active"><a class="page-link" href="#">1</a></span>
+                                                <span class="page-item"><a class="page-link" href="#">2</a></span>
+                                                <span class="page-item"><a class="page-link" href="#">3</a></span>
+                                                <span class="page-item">
+                                                    <a class="page-link page-next" href="#" aria-label="Next">
+                                                        <span aria-hidden="true"></span>
+                                                    </a>
+                                                </span>
+                                                <span class="page-item">
+                                                    <a class="page-link page-last" href="#" aria-label="last">
+                                                        <span aria-hidden="true"></span>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex-item flex-md">
+                                    <div class="info-mix flex-column">
+                                        <div class="img-area">
+                                            <img src="../assets/images/icon_car.png" alt="select">
+                                        </div>
+                                        <p>Please select vehicle information from the list on the left.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <table class="table table-col datatable dataTable no-footer">
-                                <colgroup>
-                                    <col style="width:8%">
-                                    <col style="width:10%">
-                                    <col style="width:10%">
-                                    <col style="width:11%">
-                                    <col style="width:10%" span="4">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th class="sorting sorting_asc" tabindex="0">No</th>
-                                        <th class="sorting sorting_asc" tabindex="0">Grade <span>sort</span></th>
-                                        <th class="sorting sorting_asc" tabindex="0">Status <span>sort</span></th>
-                                        <th class="sorting sorting_asc" tabindex="0">VIN</th>
-                                        <th class="sorting sorting_asc" tabindex="0">Vehicle Type <span>sort</span></th>
-                                        <th class="sorting sorting_asc" tabindex="0">DTC Code <span>sort</span></th>
-                                        <th class="sorting sorting_asc" tabindex="0">DTC Name <span>sort</span></th>
-                                        <th class="sorting sorting_asc" tabindex="0">Date <span>sort</span></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th>157</th>
-                                        <td><span class="col-good">Good</span></td>
-                                        <td>Overdue</td>
-                                        <td>KMFXXXXXXXX123456</td>
-                                        <td>QZ FCEV</td>
-                                        <td>FC1245</td>
-                                        <td>Contact error</td>
-                                        <td>29-05-2022 17:30</td>
-                                    </tr>
-                                    <tr>
-                                        <th>157</th>
-                                        <td><span class="col-DangerA">Danger A</span></td>
-                                        <td>Overdue</td>
-                                        <td>KMFXXXXXXXX123456</td>
-                                        <td>QZ FCEV</td>
-                                        <td>FC1245</td>
-                                        <td>Contact error</td>
-                                        <td>29-05-2022 17:30</td>
-                                    </tr>
-                                    <tr>
-                                        <th>157</th>
-                                        <td><span class="col-DangerB">Danger B</span></td>
-                                        <td>Overdue</td>
-                                        <td>KMFXXXXXXXX123456</td>
-                                        <td>QZ FCEV</td>
-                                        <td>FC1245</td>
-                                        <td>Contact error</td>
-                                        <td>29-05-2022 17:30</td>
-                                    </tr>
-                                    <tr>
-                                        <th>157</th>
-                                        <td><span class="col-DangerC">Danger C</span></td>
-                                        <td>Overdue</td>
-                                        <td>KMFXXXXXXXX123456</td>
-                                        <td>QZ FCEV</td>
-                                        <td>FC1245</td>
-                                        <td>Contact error</td>
-                                        <td>29-05-2022 17:30</td>
-                                    </tr>
-                                    <tr>
-                                        <th>157</th>
-                                        <td><span class="col-Unknown">Unknown</span></td>
-                                        <td>Overdue</td>
-                                        <td>KMFXXXXXXXX123456</td>
-                                        <td>QZ FCEV</td>
-                                        <td>FC1245</td>
-                                        <td>Contact error</td>
-                                        <td>29-05-2022 17:30</td>
-                                    </tr>
-                                    <tr>
-                                        <th>157</th>
-                                        <td><span class="col-good">Good</span></td>
-                                        <td>Overdue</td>
-                                        <td>KMFXXXXXXXX123456</td>
-                                        <td>QZ FCEV</td>
-                                        <td>FC1245</td>
-                                        <td>Contact error</td>
-                                        <td>29-05-2022 17:30</td>
-                                    </tr>
-                                    <tr>
-                                        <th>157</th>
-                                        <td><span class="col-good">Good</span></td>
-                                        <td>Overdue</td>
-                                        <td>KMFXXXXXXXX123456</td>
-                                        <td>QZ FCEV</td>
-                                        <td>FC1245</td>
-                                        <td>Contact error</td>
-                                        <td>29-05-2022 17:30</td>
-                                    </tr>
-                                    <tr>
-                                        <th>157</th>
-                                        <td><span class="col-good">Good</span></td>
-                                        <td>Overdue</td>
-                                        <td>KMFXXXXXXXX123456</td>
-                                        <td>QZ FCEV</td>
-                                        <td>FC1245</td>
-                                        <td>Contact error</td>
-                                        <td>29-05-2022 17:30</td>
-                                    </tr>
-                                    <tr>
-                                        <th>157</th>
-                                        <td><span class="col-good">Good</span></td>
-                                        <td>Overdue</td>
-                                        <td>KMFXXXXXXXX123456</td>
-                                        <td>QZ FCEV</td>
-                                        <td>FC1245</td>
-                                        <td>Contact error</td>
-                                        <td>29-05-2022 17:30</td>
-                                    </tr>
-                                    <tr>
-                                        <th>157</th>
-                                        <td><span class="col-good">Good</span></td>
-                                        <td>Overdue</td>
-                                        <td>KMFXXXXXXXX123456</td>
-                                        <td>QZ FCEV</td>
-                                        <td>FC1245</td>
-                                        <td>Contact error</td>
-                                        <td>29-05-2022 17:30</td>
-                                    </tr>
-                                    <!-- 데이타 없을 시 -->
-                                    <tr>
-                                        <td class="nodata" colspan="9">
-                                            <p><i class="tbl-ico-nodata"></i> There are no search results.</p>
-                                        </td>
-                                    </tr>
-                                    <!-- // 데이타 없을 시 -->
-                                </tbody>
-                            </table>
                         </div>
 
-                        <div class="align-center">
-                            <div class="pagination-wrap">
-                                <div class="pagination">
-                                    <span class="page-item">
-                                        <a class="page-link page-first" href="#" aria-label="first">
-                                            <span aria-hidden="true"></span>
-                                        </a>
-                                    </span>
-                                    <span class="page-item">
-                                        <a class="page-link page-prev" href="#" aria-label="Previous">
-                                            <span aria-hidden="true"></span>
-                                        </a>
-                                    </span>
-                                    <span class="page-item active"><a class="page-link" href="#">1</a></span>
-                                    <span class="page-item"><a class="page-link" href="#">2</a></span>
-                                    <span class="page-item"><a class="page-link" href="#">3</a></span>
-                                    <span class="page-item">
-                                        <a class="page-link page-next" href="#" aria-label="Next">
-                                            <span aria-hidden="true"></span>
-                                        </a>
-                                    </span>
-                                    <span class="page-item">
-                                        <a class="page-link page-last" href="#" aria-label="last">
-                                            <span aria-hidden="true"></span>
-                                        </a>
-                                    </span>
+                        <!-- 선택후 -->
+                        <div class="vin-list">
+                            <div class="flex-box">
+                                <div class="flex-item flex-sm">
+                                    <div class="vin-wrap">
+                                        <h4 class="stitle">Result <span class="col-point3">157</span></h4>
+                                        <ul class="vin-no-list">
+                                            <li class="active">
+                                                <a href="#">
+                                                    <span class="no">150</span>
+                                                    <div class="vin-info-list">
+                                                        <strong>KMFXXXXXXXX123456</strong>
+                                                        <p>
+                                                            <span>QZ FCEV</span>
+                                                            <span>Company Name01</span>
+                                                            <span>Lease</span>
+                                                            <span>PIMM119</span>
+                                                            <span>GPS Reception [YES]</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="no">150</span>
+                                                    <div class="vin-info-list">
+                                                        <strong>KMFXXXXXXXX123456</strong>
+                                                        <p>
+                                                            <span>QZ FCEV</span>
+                                                            <span>Company Name01</span>
+                                                            <span>Lease</span>
+                                                            <span>PIMM119</span>
+                                                            <span>GPS Reception [YES]</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="no">150</span>
+                                                    <div class="vin-info-list">
+                                                        <strong>KMFXXXXXXXX123456</strong>
+                                                        <p>
+                                                            <span>QZ FCEV</span>
+                                                            <span>Company Name01</span>
+                                                            <span>Lease</span>
+                                                            <span>PIMM119</span>
+                                                            <span>GPS Reception [YES]</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="nodata">
+                                                <p><i class="ico-nodata"></i> No search results.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="align-center">
+                                        <div class="pagination-wrap">
+                                            <div class="pagination">
+                                                <span class="page-item">
+                                                    <a class="page-link page-first" href="#" aria-label="first">
+                                                        <span aria-hidden="true"></span>
+                                                    </a>
+                                                </span>
+                                                <span class="page-item">
+                                                    <a class="page-link page-prev" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true"></span>
+                                                    </a>
+                                                </span>
+                                                <span class="page-item active"><a class="page-link" href="#">1</a></span>
+                                                <span class="page-item"><a class="page-link" href="#">2</a></span>
+                                                <span class="page-item"><a class="page-link" href="#">3</a></span>
+                                                <span class="page-item">
+                                                    <a class="page-link page-next" href="#" aria-label="Next">
+                                                        <span aria-hidden="true"></span>
+                                                    </a>
+                                                </span>
+                                                <span class="page-item">
+                                                    <a class="page-link page-last" href="#" aria-label="last">
+                                                        <span aria-hidden="true"></span>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex-item flex-md">
+                                    <div class="vin-detail">
+                                        <h5 class="title"><button class="btn-arrow"><strong>KMFXXXXXXXX123456</strong> <span>QZ FCEV
+                                        </span></button></h5>
+                                        <div class="edit-control">
+                                            <a href="#" class="btn-edit"></a>
+                                        </div>
+                                        <ul class="list-text">
+                                            <li>
+                                                <em class="title">ICCID</em>
+                                                <span class="text">891004234814455936F</span>
+                                            </li>
+                                            <li>
+                                                <em class="title">IMEI</em>
+                                                <span class="text">351615081234567</span>
+                                            </li>
+                                            <li>
+                                                <em class="title">IMEI</em>
+                                                <span class="text">313460000000001</span>
+                                            </li>
+                                            <li>
+                                                <em class="title">Model year</em>
+                                                <span class="text">2022</span>
+                                            </li>
+                                            <li>
+                                                <em class="title">Train Type</em>
+                                                <span class="text">FCEV</span>
+                                            </li>
+                                            <li>
+                                                <em class="title">Provisioning Status</em>
+                                                <span class="text">Activated</span>
+                                            </li>
+                                            <li>
+                                                <em class="title">Odometer</em>
+                                                <span class="text">25,000 km</span>
+                                            </li>
+                                        </ul>
+                                        
+                                        <div class="etc">
+                                            <ul class="list-text">
+                                                <li>
+                                                    <em class="title">Belong to</em>
+                                                    <span class="text">
+                                                        <em>Corporation</em>
+                                                        <em>Fleet</em>
+                                                        <em>Vehicle Group</em>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <em class="title">Plate No.</em>
+                                                    <span class="text">PIMM119</span>
+                                                </li>
+                                                <li>
+                                                    <em class="title">Sale Type</em>
+                                                    <span class="text">Lease</span>
+                                                </li>
+                                                <li>
+                                                    <em class="title">Monitoring<br>Comment</em>
+                                                    <span class="text">Notes appear here. Notes appear here.
+                                                        Notes appear here. Notes appear here. Notes appear here. Notes appear here.Notes appear here. Notes appear here.
+                                                        Notes appear here. Notes appear here. Notes appear here. Notes appear here.</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 선택 편집 -->
+                        <div class="vin-list">
+                            <div class="flex-box">
+                                <div class="flex-item flex-sm">
+                                    <div class="vin-wrap">
+                                        <h4 class="stitle">Result <span class="col-point3">157</span></h4>
+                                        <ul class="vin-no-list">
+                                            <li class="active">
+                                                <a href="#">
+                                                    <span class="no">150</span>
+                                                    <div class="vin-info-list">
+                                                        <strong>KMFXXXXXXXX123456</strong>
+                                                        <p>
+                                                            <span>QZ FCEV</span>
+                                                            <span>Company Name01</span>
+                                                            <span>Lease</span>
+                                                            <span>PIMM119</span>
+                                                            <span>GPS Reception [YES]</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="no">150</span>
+                                                    <div class="vin-info-list">
+                                                        <strong>KMFXXXXXXXX123456</strong>
+                                                        <p>
+                                                            <span>QZ FCEV</span>
+                                                            <span>Company Name01</span>
+                                                            <span>Lease</span>
+                                                            <span>PIMM119</span>
+                                                            <span>GPS Reception [YES]</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="no">150</span>
+                                                    <div class="vin-info-list">
+                                                        <strong>KMFXXXXXXXX123456</strong>
+                                                        <p>
+                                                            <span>QZ FCEV</span>
+                                                            <span>Company Name01</span>
+                                                            <span>Lease</span>
+                                                            <span>PIMM119</span>
+                                                            <span>GPS Reception [YES]</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="nodata">
+                                                <p><i class="ico-nodata"></i> No search results.</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="align-center">
+                                        <div class="pagination-wrap">
+                                            <div class="pagination">
+                                                <span class="page-item">
+                                                    <a class="page-link page-first" href="#" aria-label="first">
+                                                        <span aria-hidden="true"></span>
+                                                    </a>
+                                                </span>
+                                                <span class="page-item">
+                                                    <a class="page-link page-prev" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true"></span>
+                                                    </a>
+                                                </span>
+                                                <span class="page-item active"><a class="page-link" href="#">1</a></span>
+                                                <span class="page-item"><a class="page-link" href="#">2</a></span>
+                                                <span class="page-item"><a class="page-link" href="#">3</a></span>
+                                                <span class="page-item">
+                                                    <a class="page-link page-next" href="#" aria-label="Next">
+                                                        <span aria-hidden="true"></span>
+                                                    </a>
+                                                </span>
+                                                <span class="page-item">
+                                                    <a class="page-link page-last" href="#" aria-label="last">
+                                                        <span aria-hidden="true"></span>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex-item flex-md">
+                                    <div class="vin-detail">
+                                        <h5 class="title"><button class="btn-arrow"><strong>KMFXXXXXXXX123456</strong> <span>QZ FCEV
+                                        </span></button></h5>
+                                        <div class="edit-control">
+                                            <a href="#" class="btn-edit"></a>
+                                        </div>
+                                        <ul class="list-text">
+                                            <li>
+                                                <em class="title">ICCID</em>
+                                                <span class="text">891004234814455936F</span>
+                                            </li>
+                                            <li>
+                                                <em class="title">IMEI</em>
+                                                <span class="text">351615081234567</span>
+                                            </li>
+                                            <li>
+                                                <em class="title">IMEI</em>
+                                                <span class="text">313460000000001</span>
+                                            </li>
+                                            <li>
+                                                <em class="title">Model year</em>
+                                                <span class="text">2022</span>
+                                            </li>
+                                            <li>
+                                                <em class="title">Train Type</em>
+                                                <span class="text">FCEV</span>
+                                            </li>
+                                            <li>
+                                                <em class="title">Provisioning Status</em>
+                                                <span class="text">Activated</span>
+                                            </li>
+                                            <li>
+                                                <em class="title">Odometer</em>
+                                                <span class="text">25,000 km</span>
+                                            </li>
+                                        </ul>
+                                        
+                                        <div class="etc edit">
+                                            <ul class="list-text">
+                                                <li>
+                                                    <em class="title">Belong to</em>
+                                                    <span class="text flex-box">
+                                                        <div class="form-select-wrap">
+                                                            <select class="form-select" id="inp5" disabled>
+                                                                <option selected="">Corporation</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="form-select-wrap">
+                                                            <select class="form-select" id="inp4" disabled>
+                                                                <option selected="">Fleet</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="form-select-wrap">
+                                                            <select class="form-select" id="inp3">
+                                                                <option selected="">Vehicle group
+                                                                </option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <em class="title">Plate No.</em>
+                                                    <span class="text">
+                                                        <div class="inp-group">
+                                                            <input type="text" class="form-control" id="inp1" placeholder="Enter VIN number">
+                                                        </div>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <em class="title">Sale Type</em>
+                                                    <span class="text">
+                                                        <fieldset class="form-item">
+                                                            <div class="inp-basic">
+                                                                <div class="form-check-list">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="rdo" id="rdo1">
+                                                                        <label class="form-check-label" for="rdo1">Sale</label>
+                                                                    </div>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="rdo" id="rdo2" checked="">
+                                                                        <label class="form-check-label" for="rdo2">Lease</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <em class="title">Sale Type</em>
+                                                    <span class="text">
+                                                        <fieldset class="form-item">
+                                                            <div class="inp-basic">
+                                                                <div class="form-check-list">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="rdo1" id="rdo3">
+                                                                        <label class="form-check-label" for="rdo3">Yes</label>
+                                                                    </div>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio" name="rdo1" id="rdo4" checked="">
+                                                                        <label class="form-check-label" for="rdo4">No</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </fieldset>
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <em class="title">Monitoring<br>Comment</em>
+                                                    <span class="text"><textarea class="form-control" aria-label="With textarea"></textarea></span>
+                                                </li>
+                                            </ul>
+                                            <div class="btn-wrap">
+                                                <button type="button" class="btn btn-outline-secondary btn-sm btn-tbl">Cancel</button>
+                                                <button class="btn btn-primary btn-sm btn-tbl" type="submit">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
