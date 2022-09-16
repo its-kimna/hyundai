@@ -14,15 +14,23 @@
 	<div class="wrap">
 		<header>
 			<div class="section">
-				<h1 class="logo"><button class="logo-link"><span class="blind">bluelink uptimecare</span></button></h1>
+				<h1 class="logo"><button class="logo-link"><span class="blind">bluelink Fleet</span></button></h1>
                 <div class="util">
-                    <button class="link dropdown-toggle" data-coreui-toggle="dropdown" aria-expanded="false"><i class="ico-language"></i></button>
-                    <ul class="dropdown-menu language">
-                        <li><button class="lang-menu">English</button></li>
-                        <li><button class="lang-menu">Korean</button></li>
-                    </ul>
-                    <!-- <button class="link new"><i class="ico-alram new"></i></button> -->
-                    <button class="link"><i class="ico-user"></i><span>Hyundai Motor Group / John smith</span></button>
+                    <div class="dropdown">
+                        <button class="link dropdown-toggle" type="button" data-coreui-toggle="dropdown" aria-expanded="false">
+                            Germany
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Germany</a></li>
+                            <li><a class="dropdown-item" href="#">Korean</a></li>
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                        </ul>
+                    </div>
+                    <button class="link"><span>Hyundai Motor Group / John smith</span></button>
+                    <div>
+                        <button class="link"><i class="ico-alram"></i></button>
+                        <button class="link"><i class="ico-logout"></i></button>
+                    </div>
                 </div>
 			</div>
 		</header>
@@ -88,10 +96,6 @@
                 <div class="w-content">
                     <div class="title-area">
                         <h3 class="page-title">Account management</h3>
-                        <div class="location">
-                            <span>System management</span>
-                            <span class="on">Account management</span>
-                        </div>
                     </div>
 
                     <div class="search-wrap">
@@ -163,7 +167,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="group-box size">
+                        <div class="group-box hasbtn">
                             <div class="inp-group">
                                 <label for="inp6" class="form-label">IMEI</label>
                                 <input type="text" class="form-control" id="inp1" placeholder="placeholder">
@@ -176,12 +180,12 @@
                                 <label for="inp7" class="form-label">IMSI</label>
                                 <input type="text" class="form-control" id="inp1" placeholder="placeholder">
                             </div>
-                            <div class="inp-group hasbtn">
+                            <div class="inp-group">
                                 <label for="inp3" class="form-label">VIN</label>
                                 <input type="text" class="form-control" id="inp1" placeholder="placeholder">
-                                <div class="btn-search">
-                                    <button type="button" class="btn btn-primary ico-search"><span class="blind">검색</span></button>
-                                </div>
+                            </div>
+                            <div class="btn-search">
+                                <button type="button" class="btn btn-primary ico-search"><span class="blind">검색</span></button>
                             </div>
                         </div>
                     </div>
