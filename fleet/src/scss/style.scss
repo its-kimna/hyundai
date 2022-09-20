@@ -305,9 +305,9 @@ input::placeholder{color:$col-lightGray3}
 
 .form-check.form-switch{padding-left:0;padding-top:3px;
     .form-label{line-height:24px}
-    .form-check-input{float:inherit;margin-left:0;width:70px;height:24px;border-radius:12px;margin-top:0;position:relative;background-color:$col-lightGray3  !important;background-image:url($assetPath+"bg-form-switch.png") !important;
+    .form-check-input{float:inherit;margin-left:0;width:70px;height:24px;border-radius:12px;margin-top:0;position:relative;background-color: $col-lightGray3 !important;background-image:url($assetPath+"bg-form-switch.png") !important;border: 1px solid $col-lightGray3;
         background-position:left center;
-        &:after{content:"CLOSE";position:absolute;right:5px;font-size:12px;color:$col-white;line-height:24px}
+        &:after{content:"CLOSE";position:absolute;right:6px;font-size:12px;color:$col-white;line-height:24px}
         &:checked{background-color:#2d6894 !important;border-color:#2d6894;background-image:url($assetPath+"bg-form-switch.png") !important;background-position:right center;
             &:after{content:"OPEN";right:inherit;left:8px;color:$col-white}
         }
