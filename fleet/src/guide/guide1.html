@@ -515,6 +515,22 @@
 					</div>
 				</div>
 			</div>
+			<hr>
+			<h2>tabs</h2>
+			<nav>
+				<div class="nav nav-tabs" id="nav-tab" role="tablist">
+				  <button class="nav-link active" id="nav-check-tab" data-coreui-toggle="tab" data-coreui-target="#nav-check" type="button" role="tab" aria-controls="nav-check" aria-selected="true">tab01</button>
+				  <button class="nav-link" id="nav-list-tab" data-coreui-toggle="tab" data-coreui-target="#nav-list" type="button" role="tab" aria-controls="nav-list" aria-selected="false">tab02</button>
+				</div>
+			</nav>
+			<div class="tab-content" id="nav-tabContent">
+				<div class="tab-pane fade show active" id="nav-check" role="tabpanel" aria-labelledby="nav-check-tab" tabindex="0">
+					tab01
+				</div>
+				<div class="tab-pane fade" id="nav-list" role="tabpanel" aria-labelledby="nav-list-tab" tabindex="0">
+					tab02
+				</div>
+			</div>
 		</div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.2.1/dist/js/coreui.bundle.min.js" crossorigin="anonymous"></script>

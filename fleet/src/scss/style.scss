@@ -779,10 +779,10 @@ input::placeholder{color:$col-lightGray3}
         .file{display:block;margin-top:30px;color:$col-point2;
             .ico-file{background:url($assetPath + "ico-file-blue.svg") no-repeat 50% 50%/100% auto;margin:0 10px 0 0}
         }
-        .edit-control{position:absolute;top:26px;right:26px;
-            .btn-edit{display:inline-block;width:20px;height:20px;background:url($assetPath + "ico-edit-black.svg") no-repeat 50% 50%/16px auto}
-            .btn-del{display:inline-block;width:20px;height:20px;background:url($assetPath + "ico-del.svg") no-repeat 50% 50%/16px auto;margin-left:11px}
-        }
+    }
+    .edit-control{position:absolute;top:26px;right:26px;
+        .btn-edit{display:inline-block;width:20px;height:20px;background:url($assetPath + "ico-edit-black.svg") no-repeat 50% 50%/16px auto}
+        .btn-del{display:inline-block;width:20px;height:20px;background:url($assetPath + "ico-del.svg") no-repeat 50% 50%/16px auto;margin-left:11px}
     }
 
     .vin-list {
@@ -791,8 +791,8 @@ input::placeholder{color:$col-lightGray3}
             .vin-no-list {
                 li {border:1px solid #e5e5e5;margin-top:10px;background-color:#fff;
                     &:first-child {margin-top:0;}
-                    a {display:flex;padding:20px 0;
-                        .no {width:86px;text-align:center;font-size:15px;color:#000;    line-height: 46px;}
+                    > a {display:flex;padding:20px 0;
+                        .no {width:86px;text-align:center;font-size:15px;color:#000;line-height: 46px;}
                         .vin-info-list {margin-left:0;flex:1;
                             strong {color:#000;font-size:20px;line-height:25px;margin-bottom:5px;}
                             p {
@@ -811,10 +811,11 @@ input::placeholder{color:$col-lightGray3}
                     &:hover {
                         background-color:#ebf6ff; border:1px solid #b3cee1;
                     }
-                    &.nodata {height:200px;text-align: center;padding: 70px 0;font-size: 18px;color: #adb5bd;background-color:#fff;
-                        p {line-height: 40px;
+                    &.nodata {height:200px;padding: 70px 0;font-size: 18px;color: #adb5bd;background-color:#fff;
+                        p {line-height: 40px;display:flex;justify-content: center;
                             .ico-nodata {display: inline-block;width: 48px;height: 48px;border-radius: 50%;margin-right: 22px;vertical-align: middle;background: #f2f0ee url(../assets/images/ico-nodata.svg) no-repeat 50% 50%/24px auto;
                             }
+                            &.line2 {line-height: 1.31;flex:1;}
                         }
                         &:hover {
                             background-color:#fff; border:1px solid #e5e5e5;
@@ -911,7 +912,7 @@ input::placeholder{color:$col-lightGray3}
         .stitle{height:40px;line-height:16px;margin:0 0 20px 20px;padding-top:24px;
             + .tbl-btn-group{position:absolute;top:0px;right:0}
         }
-        .table{clear:both;width:100%;overflow:hidden;box-shadow:0px 1px 7px 0 rgba($col-black, 0.05);position:relative;margin-top:20px;border-top:1px solid $col-lightGray;
+        .table{clear:both;width:100%;overflow:hidden;position:relative;margin-top:20px;border-top:1px solid $col-lightGray;
             &.datatable{margin:20px 0 !important}
             &.table-col{
                 thead th{background:$bg-color2;line-height:24px;padding:13px 0;text-align:center;vertical-align:middle;position:relative;
@@ -1511,6 +1512,59 @@ input::placeholder{color:$col-lightGray3}
             }
         }
     }
+
+    .refer-section {
+        .vin-list {
+            .vin-wrap {
+                .stitle {margin-bottom:10px;}
+                .vin-no-list {
+                    li {position:relative;display:flex;border:1px solid #e5e5e5;padding:20px 0;margin-top:10px;background-color:#fff;
+                        &:first-child {margin-top:0;}
+                        &.nodata {padding: 70px 0;}
+                        .no {width:86px;text-align:center;font-size:15px;color:#000;line-height: 69px;}
+                        .vin-info-list {margin-left:0;flex:1;display:flex;gap:20px;
+                            .inp-group { max-width:162px;width:162px;
+                                .form-label {display: inline-block;font-weight: 500;}
+                                .inp-unit {position:relative;width:100%;
+                                    input {width: 100%;padding-right:38px; text-align: right;}
+                                    span {position: absolute;top:10px;right:12px;}
+                                }
+                                .txtdata {line-height: 40px;font-size: 15px;color:#333;}
+                            }
+                            strong {color:#000;font-size:20px;line-height:25px;margin-bottom:5px;}
+                            p {
+                                span {display:inline-block;font-size:15px;color:#999;
+                                    &:after {content:'';display:inline-block;width:1px;height:15px;background-color:#e5e5e5;vertical-align: middle;margin:0 10px;}
+                                    &:last-child{
+                                        &:after {display:none;}
+                                    }
+                                }
+                            }
+                        }
+                        .btn-wrap {position:absolute;top:10px;right:20px;
+                            .btn.btn-sm {min-width:80px;}
+                            > a  {width:40px; height:40px;}
+                            .btn-edit {margin-right: 9px;background: url($assetPath + "ico-writrer_40.svg") no-repeat 50% 50%/100%;}
+                            .btn-del {background: url($assetPath + "ico-del_40.svg") no-repeat 50% 50%/100%;}
+                        }
+                    }
+                }
+            }
+        }
+        .check {display:inline-block;width:18px;height:13px;vertical-align:middle;background: url($assetPath + "ico_tbl_checked.svg") no-repeat 50% 50% /100%; }
+    }
+
+    // Tabs
+    nav {margin-bottom:20px;
+        .nav-tabs {border-bottom:1px solid #e5e5e5 !important;
+            > .nav-link {line-height:40px; height:40px;padding:0 20px;color:#555;font-size:18px;border: 1px solid #e5e5e5;border-radius:0;background: #f4f4f4;margin-bottom:-1px;margin-left:-1px;}
+            .nav-link.active,
+            .nav-item.show .nav-link {color: #2d6894;background-color: $col-white;border-color: #e5e5e5;border-top-left-radius: 0;border-top-right-radius: 0;border-bottom: 1px solid #fff;
+            //   border-bottom:none;
+            }
+        }
+    }
+
     
 
     .notice-section{background:$col-white;padding-bottom:10px;box-shadow:0px 1px 7px 0 rgba($col-black, 0.1);border-radius:10px;

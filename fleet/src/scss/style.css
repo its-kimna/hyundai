@@ -2368,18 +2368,18 @@ input::placeholder {
   background: url("../assets/images/ico-file-blue.svg") no-repeat 50% 50%/100% auto;
   margin: 0 10px 0 0;
 }
-.wrap .view-content .edit-control {
+.wrap .edit-control {
   position: absolute;
   top: 26px;
   right: 26px;
 }
-.wrap .view-content .edit-control .btn-edit {
+.wrap .edit-control .btn-edit {
   display: inline-block;
   width: 20px;
   height: 20px;
   background: url("../assets/images/ico-edit-black.svg") no-repeat 50% 50%/16px auto;
 }
-.wrap .view-content .edit-control .btn-del {
+.wrap .edit-control .btn-del {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -2399,33 +2399,33 @@ input::placeholder {
 .wrap .vin-list .vin-wrap .vin-no-list li:first-child {
   margin-top: 0;
 }
-.wrap .vin-list .vin-wrap .vin-no-list li a {
+.wrap .vin-list .vin-wrap .vin-no-list li > a {
   display: flex;
   padding: 20px 0;
 }
-.wrap .vin-list .vin-wrap .vin-no-list li a .no {
+.wrap .vin-list .vin-wrap .vin-no-list li > a .no {
   width: 86px;
   text-align: center;
   font-size: 15px;
   color: #000;
   line-height: 46px;
 }
-.wrap .vin-list .vin-wrap .vin-no-list li a .vin-info-list {
+.wrap .vin-list .vin-wrap .vin-no-list li > a .vin-info-list {
   margin-left: 0;
   flex: 1;
 }
-.wrap .vin-list .vin-wrap .vin-no-list li a .vin-info-list strong {
+.wrap .vin-list .vin-wrap .vin-no-list li > a .vin-info-list strong {
   color: #000;
   font-size: 20px;
   line-height: 25px;
   margin-bottom: 5px;
 }
-.wrap .vin-list .vin-wrap .vin-no-list li a .vin-info-list p span {
+.wrap .vin-list .vin-wrap .vin-no-list li > a .vin-info-list p span {
   display: inline-block;
   font-size: 15px;
   color: #999;
 }
-.wrap .vin-list .vin-wrap .vin-no-list li a .vin-info-list p span:after {
+.wrap .vin-list .vin-wrap .vin-no-list li > a .vin-info-list p span:after {
   content: "";
   display: inline-block;
   width: 1px;
@@ -2434,7 +2434,7 @@ input::placeholder {
   vertical-align: middle;
   margin: 0 10px;
 }
-.wrap .vin-list .vin-wrap .vin-no-list li a .vin-info-list p span:last-child:after {
+.wrap .vin-list .vin-wrap .vin-no-list li > a .vin-info-list p span:last-child:after {
   display: none;
 }
 .wrap .vin-list .vin-wrap .vin-no-list li.active {
@@ -2447,7 +2447,6 @@ input::placeholder {
 }
 .wrap .vin-list .vin-wrap .vin-no-list li.nodata {
   height: 200px;
-  text-align: center;
   padding: 70px 0;
   font-size: 18px;
   color: #adb5bd;
@@ -2455,6 +2454,8 @@ input::placeholder {
 }
 .wrap .vin-list .vin-wrap .vin-no-list li.nodata p {
   line-height: 40px;
+  display: flex;
+  justify-content: center;
 }
 .wrap .vin-list .vin-wrap .vin-no-list li.nodata p .ico-nodata {
   display: inline-block;
@@ -2464,6 +2465,10 @@ input::placeholder {
   margin-right: 22px;
   vertical-align: middle;
   background: #f2f0ee url(../assets/images/ico-nodata.svg) no-repeat 50% 50%/24px auto;
+}
+.wrap .vin-list .vin-wrap .vin-no-list li.nodata p.line2 {
+  line-height: 1.31;
+  flex: 1;
 }
 .wrap .vin-list .vin-wrap .vin-no-list li.nodata:hover {
   background-color: #fff;
@@ -2728,7 +2733,6 @@ input::placeholder {
   clear: both;
   width: 100%;
   overflow: hidden;
-  box-shadow: 0px 1px 7px 0 rgba(0, 0, 0, 0.05);
   position: relative;
   margin-top: 20px;
   border-top: 1px solid #e5e5e5;
@@ -4535,6 +4539,139 @@ input::placeholder {
   margin-top: 5px;
   line-height: 1.5;
   color: #080707;
+}
+.wrap .refer-section .vin-list .vin-wrap .stitle {
+  margin-bottom: 10px;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li {
+  position: relative;
+  display: flex;
+  border: 1px solid #e5e5e5;
+  padding: 20px 0;
+  margin-top: 10px;
+  background-color: #fff;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li:first-child {
+  margin-top: 0;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li.nodata {
+  padding: 70px 0;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .no {
+  width: 86px;
+  text-align: center;
+  font-size: 15px;
+  color: #000;
+  line-height: 69px;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .vin-info-list {
+  margin-left: 0;
+  flex: 1;
+  display: flex;
+  gap: 20px;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .vin-info-list .inp-group {
+  max-width: 162px;
+  width: 162px;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .vin-info-list .inp-group .form-label {
+  display: inline-block;
+  font-weight: 500;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .vin-info-list .inp-group .inp-unit {
+  position: relative;
+  width: 100%;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .vin-info-list .inp-group .inp-unit input {
+  width: 100%;
+  padding-right: 38px;
+  text-align: right;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .vin-info-list .inp-group .inp-unit span {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .vin-info-list .inp-group .txtdata {
+  line-height: 40px;
+  font-size: 15px;
+  color: #333;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .vin-info-list strong {
+  color: #000;
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 5px;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .vin-info-list p span {
+  display: inline-block;
+  font-size: 15px;
+  color: #999;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .vin-info-list p span:after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  background-color: #e5e5e5;
+  vertical-align: middle;
+  margin: 0 10px;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .vin-info-list p span:last-child:after {
+  display: none;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .btn-wrap {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .btn-wrap .btn.btn-sm {
+  min-width: 80px;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .btn-wrap > a {
+  width: 40px;
+  height: 40px;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .btn-wrap .btn-edit {
+  margin-right: 9px;
+  background: url("../assets/images/ico-writrer_40.svg") no-repeat 50% 50%/100%;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list li .btn-wrap .btn-del {
+  background: url("../assets/images/ico-del_40.svg") no-repeat 50% 50%/100%;
+}
+.wrap .refer-section .check {
+  display: inline-block;
+  width: 18px;
+  height: 13px;
+  vertical-align: middle;
+  background: url("../assets/images/ico_tbl_checked.svg") no-repeat 50% 50%/100%;
+}
+.wrap nav {
+  margin-bottom: 20px;
+}
+.wrap nav .nav-tabs {
+  border-bottom: 1px solid #e5e5e5 !important;
+}
+.wrap nav .nav-tabs > .nav-link {
+  line-height: 40px;
+  height: 40px;
+  padding: 0 20px;
+  color: #555;
+  font-size: 18px;
+  border: 1px solid #e5e5e5;
+  border-radius: 0;
+  background: #f4f4f4;
+  margin-bottom: -1px;
+  margin-left: -1px;
+}
+.wrap nav .nav-tabs .nav-link.active,
+.wrap nav .nav-tabs .nav-item.show .nav-link {
+  color: #2d6894;
+  background-color: #fff;
+  border-color: #e5e5e5;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom: 1px solid #fff;
 }
 .wrap .notice-section {
   background: #fff;
