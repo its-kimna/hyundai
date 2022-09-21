@@ -44,6 +44,14 @@ $(function(){
 			$(this).parents('.accordion-header').siblings('.accordion-collapse').children().find('input').prop('checked',false);
 		}
 	});
+    // 체크 박스라인
+    $(".vin-no-list li .form-check-input").on('click', function(e){
+		if($(this).is(":checked")){
+            $(this).parents('li').addClass('active').children().find('input').prop('checked',true);
+		}else{
+			$(this).parents('li').removeClass('active').children().find('input').prop('checked',false);
+		}
+	});
 
 })
 
