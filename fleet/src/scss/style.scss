@@ -53,14 +53,14 @@ caption{overflow:hidden;margin-left:-9999px;width:1px;height:1px;font-size:1px;l
     .esse:before{margin:0 3px 0 0}
 }
 .form-select:disabled {background-color:#ecebea;border:1px solid #dddbda;}
-.form-control{border-color:#dddbda;border-radius:0 !important;
+.form-control{border-color:#dddbda;border-radius:0 !important;color:#333;padding: 10px 12px;
     &:focus{box-shadow:none;border-color:$col-default}
 }
 .form-select{padding:0.438rem 2.25rem 0.438rem 0.75rem !important;border-color:#dddbda;border-radius:0;background-image:none;
     &:focus{box-shadow:none;border-color:$col-default}
 }
 .form-select-wrap{position:relative;
-    &:after{content:"";position:absolute;top:14px;right:16px;width:0px;height:0px;border-top:8px solid #666666;border-left:6px solid transparent;border-right:6px solid transparent}
+    &:after{content:"";position:absolute;top:16px;right:16px;width:0px;height:0px;border-top:8px solid #666666;border-left:6px solid transparent;border-right:6px solid transparent}
 }
 .form-check-input:checked{background-color:$col-point2;border-color:$col-point2;box-shadow:none}
 .form-switch{
@@ -84,6 +84,7 @@ caption{overflow:hidden;margin-left:-9999px;width:1px;height:1px;font-size:1px;l
 
 
 .mt0{margin-top:0 !important}
+.mt10{margin-top:10px !important}
 .mt12{margin-top:12px !important}
 .mt20{margin-top:20px !important}
 .mt30{margin-top:30px !important}
@@ -103,8 +104,8 @@ input::placeholder{color:$col-lightGray3}
 }
 
 .btn-wrap{margin-top:40px;display:block;text-align:center;
-    .btn{margin:0 3px;line-height:50px;height:50px;min-width:160px;padding:0;border-radius:0;
-        &.btn-sm{min-width:100px;height:40px;line-height:40px;border-radius:0}
+    .btn{margin:0 5px;font-size:18px;font-weight: 500;line-height:50px;height:50px;min-width:200px;padding:0;border-radius:0;
+        &.btn-sm{min-width:100px;font-size:15px;font-weight: normal;height:40px;line-height:40px;border-radius:0}
     }
     &.btn-right{
         text-align:right;
@@ -634,7 +635,7 @@ input::placeholder{color:$col-lightGray3}
         }
 
         &.type03{padding:0px 0px 20px;border:1px solid transparent;
-            .hasbtn{display:flex;
+            .hasbtn{display:flex;gap:10px;
                 .form-control{margin-right:auto}
                 .btn-search{display:flex; vertical-align:top}
             }
@@ -1529,6 +1530,12 @@ input::placeholder{color:$col-lightGray3}
     }
 
     .refer-section {
+        .box-gray {padding:20px 30px;
+            .list-text {
+                .form-label{flex:0 0 142px;width:142px;display: inline-block;}
+                em {flex:0 0 142px;width:142px;display: inline-block;}
+            }
+        }
         .vin-list {
             &.type02 {
                 .flex-box {gap:15px;}
@@ -1590,8 +1597,7 @@ input::placeholder{color:$col-lightGray3}
                             &:hover {
                                 background-color:#ebf6ff; border:1px solid #b3cee1;
                             }
-                            &.nodata {height:200px;padding: 70px 0;font-size: 18px;color: #adb5bd;display: flex;
-                                justify-content: center;background-color:#fff;
+                            &.nodata {height:200px;padding: 70px 0;font-size: 18px;color: #adb5bd;display: flex;justify-content: center;background-color:#fff;
                                 p {line-height: 48px;display:flex;justify-content: center;
                                     .ico-nodata {display: inline-block;width: 48px;height: 48px;border-radius: 50%;margin-right: 22px;vertical-align: middle;background: #f2f0ee url(../assets/images/ico-nodata.svg) no-repeat 50% 50%/24px auto;
                                     }
@@ -1600,6 +1606,7 @@ input::placeholder{color:$col-lightGray3}
                                 &:hover {
                                     background-color:#fff; border:1px solid #e5e5e5;
                                 }
+                                &.h250 {padding:95px 0;height:250px;}
                             }
                         }
                         .vin-info-list {margin-left:0;flex:1;display:block;
@@ -1612,8 +1619,15 @@ input::placeholder{color:$col-lightGray3}
                                     }
                                 }
                             }
+                            &.type02 {display: flex;
+                                dt {font-size:15px; color:#999;font-weight:normal;line-height:19px;}
+                                dd {font-size:20px; color:#000;font-weight:500;line-height:25px;}
+                            }
                         }
                     }
+                }
+                &.noList {height:90%;
+                    .flex-column {background:transparent;}
                 }
             }
         }

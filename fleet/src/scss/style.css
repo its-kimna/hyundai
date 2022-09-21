@@ -136,6 +136,8 @@ caption {
 .form-control {
   border-color: #dddbda;
   border-radius: 0 !important;
+  color: #333;
+  padding: 10px 12px;
 }
 .form-control:focus {
   box-shadow: none;
@@ -159,7 +161,7 @@ caption {
 .form-select-wrap:after {
   content: "";
   position: absolute;
-  top: 14px;
+  top: 16px;
   right: 16px;
   width: 0px;
   height: 0px;
@@ -238,6 +240,10 @@ caption {
   margin-top: 0 !important;
 }
 
+.mt10 {
+  margin-top: 10px !important;
+}
+
 .mt12 {
   margin-top: 12px !important;
 }
@@ -308,15 +314,19 @@ input::placeholder {
   text-align: center;
 }
 .btn-wrap .btn {
-  margin: 0 3px;
+  margin: 0 5px;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 50px;
   height: 50px;
-  min-width: 160px;
+  min-width: 200px;
   padding: 0;
   border-radius: 0;
 }
 .btn-wrap .btn.btn-sm {
   min-width: 100px;
+  font-size: 15px;
+  font-weight: normal;
   height: 40px;
   line-height: 40px;
   border-radius: 0;
@@ -1940,6 +1950,7 @@ input::placeholder {
 }
 .wrap .search-wrap.type03 .hasbtn {
   display: flex;
+  gap: 10px;
 }
 .wrap .search-wrap.type03 .hasbtn .form-control {
   margin-right: auto;
@@ -4571,6 +4582,19 @@ input::placeholder {
   line-height: 1.5;
   color: #080707;
 }
+.wrap .refer-section .box-gray {
+  padding: 20px 30px;
+}
+.wrap .refer-section .box-gray .list-text .form-label {
+  flex: 0 0 142px;
+  width: 142px;
+  display: inline-block;
+}
+.wrap .refer-section .box-gray .list-text em {
+  flex: 0 0 142px;
+  width: 142px;
+  display: inline-block;
+}
 .wrap .refer-section .vin-list.type02 .flex-box {
   gap: 15px;
 }
@@ -4769,6 +4793,10 @@ input::placeholder {
   background-color: #fff;
   border: 1px solid #e5e5e5;
 }
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list.type02 li.nodata.h250 {
+  padding: 95px 0;
+  height: 250px;
+}
 .wrap .refer-section .vin-list .vin-wrap .vin-no-list.type02 .vin-info-list {
   margin-left: 0;
   flex: 1;
@@ -4796,6 +4824,27 @@ input::placeholder {
 }
 .wrap .refer-section .vin-list .vin-wrap .vin-no-list.type02 .vin-info-list p span:last-child:after {
   display: none;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list.type02 .vin-info-list.type02 {
+  display: flex;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list.type02 .vin-info-list.type02 dt {
+  font-size: 15px;
+  color: #999;
+  font-weight: normal;
+  line-height: 19px;
+}
+.wrap .refer-section .vin-list .vin-wrap .vin-no-list.type02 .vin-info-list.type02 dd {
+  font-size: 20px;
+  color: #000;
+  font-weight: 500;
+  line-height: 25px;
+}
+.wrap .refer-section .vin-list .vin-wrap.noList {
+  height: 90%;
+}
+.wrap .refer-section .vin-list .vin-wrap.noList .flex-column {
+  background: transparent;
 }
 .wrap .refer-section .check {
   display: inline-block;
