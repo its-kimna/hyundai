@@ -62,6 +62,10 @@ function defaultSwiper(){
             el: ".swiper-pagination",
             clickable: true,
         },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     });
 }
 
@@ -73,14 +77,14 @@ function col3Swiper(){
         loop: false,
         loopFillGroupWithBlank: true,
         pagination: {
-          el: ".swiper-pagination",
-          clickable: false,
+            el: ".swiper-pagination",
+            clickable: false,
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
-      });
+    });
 }
 
 
@@ -132,7 +136,7 @@ function accordionBox(){
 function filebox(){
 
     var fileTarget = $('.filebox .upload-hidden');
-  
+
     fileTarget.on('change', function(){
         if(window.FileReader){
             var filename = $(this)[0].files[0].name;
