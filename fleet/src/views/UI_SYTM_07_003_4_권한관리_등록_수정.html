@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi"/>
+	<title>fleet</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.2.1/dist/css/coreui.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../scss/dataTables.bootstrap4.css">
+	<link rel="stylesheet" type="text/css" href="../scss/style.css">
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<div class="section">
+				<h1 class="logo"><button class="logo-link"><span class="blind">bluelink Fleet</span></button></h1>
+                <div class="util">
+                    <div class="dropdown">
+                        <button class="link dropdown-toggle" type="button" data-coreui-toggle="dropdown" aria-expanded="false">
+                            Germany
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Germany</a></li>
+                            <li><a class="dropdown-item" href="#">Korean</a></li>
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                        </ul>
+                    </div>
+                    <button class="link"><span>Hyundai Motor Group / John smith</span></button>
+                    <div>
+                        <button class="link"><i class="ico-alram"></i></button>
+                        <button class="link"><i class="ico-logout"></i></button>
+                    </div>
+                </div>
+			</div>
+		</header>
+        <div class="container">
+            <aside>
+                <ul class="menu">
+                    <li><button class="link-menu"><i class="ico-menu01"></i><span>Dashboard</span></button></li>
+                    <li><button class="link-menu"><i class="ico-menu02"></i><span>Vehicle Control</span></button></li>
+                    <li><button class="link-menu"><i class="ico-menu03"></i><span>Predictive Maintenance</span></button>
+                        <ul class="depth">
+                            <li><button class="link-menu">Predictive Maintenance Status</button></li>
+                            <li><button class="link-menu">VIN List</button></li>
+                        </ul>
+                    </li>
+                    <li><button class="link-menu"><i class="ico-menu04"></i><span>DTC Code</span></button>
+                        <ul class="depth">
+                            <li><button class="link-menu">DTC Code</button></li>
+                            <li><button class="link-menu">DTC Status Check</button></li>
+                            <li><button class="link-menu">Monthly Report History</button></li>
+                        </ul>
+                    </li>
+                    <li><button class="link-menu"><i class="ico-menu05"></i><span>Maintenance</span></button>
+                        <ul class="depth">
+                            <li><button class="link-menu">Maintenance Status</button></li>
+                            <li><button class="link-menu">Maintenance History</button></li>
+                        </ul>
+                    </li>
+                    <li><button class="link-menu"><i class="ico-menu06"></i><span>Safety Control</span></button></li>
+                    <li><button class="link-menu"><i class="ico-menu07"></i><span>Driving Analysis</span></button></li>
+                    <li><button class="link-menu"><i class="ico-menu08"></i><span>Communications</span></button>
+                        <ul class="depth">
+                            <li><button class="link-menu">Notice Board</button></li>
+                            <li><button class="link-menu">Q&A</button></li>
+                        </ul>
+                    </li>
+                    <li><button class="link-menu"><i class="ico-menu09"></i><span>Reference Info.</span></button>
+                        <ul class="depth">
+                            <li><button class="link-menu">Vehicle Mgt.</button></li>
+                            <li><button class="link-menu">Business Vehicle Mgt.</button></li>
+                            <li><button class="link-menu">Provisioning Mgt.</button></li>
+                            <li><button class="link-menu">Fleet Vehicle Group Mgt.</button></li>
+                            <li><button class="link-menu">Maintenance Mgt.</button></li>
+                            <li><button class="link-menu">Dealer Mapping Mgt.</button></li>
+                        </ul>
+                    </li>
+                    <li class="on"><button class="link-menu"><i class="ico-menu10"></i><span>System Mgt.</span></button>
+                        <ul class="depth">
+                            <li><button class="link-menu">Notice Board Mgt.</button></li>
+                            <li><button class="link-menu">User Usage History</button></li>
+                            <li><button class="link-menu">Business Mgt.</button></li>
+                            <li><button class="link-menu">Account Mgt.</button></li>
+                            <li><button class="link-menu">Menu Mgt.</button></li>
+                            <li><button class="link-menu">Code Mgt.</button></li>
+                            <li><button class="link-menu">Authority Mgt.</button></li>
+                            <li><button class="link-menu">SMS Mgt.</button></li>
+                            <li class="on"><button class="link-menu">Language Mgt.</button></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="btn-aside btn-aside-close"></button>
+            </aside>
+            <div class="content">
+                <div class="w-content">
+                    <div class="title-area">
+                        <div class="inp-basic">
+                            <input type="text" class="form-control" placeholder="Enter Authority name here">
+                        </div>
+                    </div>
+                    
+                    <div class="section sms-content">
+                        <div class="write-content">
+                            <ul class="text-list">
+                                <li>
+                                    <em class="title">Authority ID</em>
+                                    <span class="text info"><i class="ico-info"></i>Authority IDs are automatically generated after registration</span>
+                                </li>
+                                <li>
+                                    <em class="title">Authority Description</em>
+                                    <span class="text">
+                                        <div class="inp-basic">
+                                            <textarea class="form-control textarea" aria-label="With textarea" rows="5" placeholder="Enter description here"></textarea>
+                                        </div>
+                                    </span>
+                                </li>
+                                <li>
+                                    <em class="title">Activation</em>
+                                    <span class="text">
+                                        <div class="inp-basic">
+                                            <div class="form-check-list">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="Posting" id="Posting1">
+                                                    <label class="form-check-label" for="Posting1">Activated</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="Posting" id="Posting2" checked>
+                                                    <label class="form-check-label" for="Posting2">Deactivated</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="table-wrap">
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width:230px">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <th scope="row">
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk01_01">
+                                                        <label class="form-check-label" for="chk01_01">Vehicle Control</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </th>
+                                        <td>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk01_02">
+                                                        <label class="form-check-label" for="chk01_02">Monitoring</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk02_01">
+                                                        <label class="form-check-label" for="chk02_01">Predictive Maintenance</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </th>
+                                        <td>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk02_02">
+                                                        <label class="form-check-label" for="chk02_02">Predictive Maintenance Status</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk02_03">
+                                                        <label class="form-check-label" for="chk02_03">VIN List</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk03_01">
+                                                        <label class="form-check-label" for="chk03_01">DTC Code</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </th>
+                                        <td>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk03_02">
+                                                        <label class="form-check-label" for="chk03_02">DTC Code</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk03_03">
+                                                        <label class="form-check-label" for="chk03_03">DTC Status Check</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk03_04">
+                                                        <label class="form-check-label" for="chk03_04">Monthly Report History</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk04_01">
+                                                        <label class="form-check-label" for="chk04_01">Maintenance</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </th>
+                                        <td>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk04_02">
+                                                        <label class="form-check-label" for="chk04_02">Maintenance Status</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk04_03">
+                                                        <label class="form-check-label" for="chk04_03">Maintenance History</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk05_01">
+                                                        <label class="form-check-label" for="chk05_01">Safety Check</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </th>
+                                        <td>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk05_02">
+                                                        <label class="form-check-label" for="chk05_02">Safety Check</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk06_01">
+                                                        <label class="form-check-label" for="chk06_01">Driving Analysis</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </th>
+                                        <td>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk06_02">
+                                                        <label class="form-check-label" for="chk06_02">Driving Analysis</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk07_01">
+                                                        <label class="form-check-label" for="chk07_01">Communications</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </th>
+                                        <td>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk07_02">
+                                                        <label class="form-check-label" for="chk07_02">Notice Board</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk07_03">
+                                                        <label class="form-check-label" for="chk07_03">Q&A</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk08_01">
+                                                        <label class="form-check-label" for="chk08_01">Reference Info.</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </th>
+                                        <td>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk08_02">
+                                                        <label class="form-check-label" for="chk08_02">Vehicle Mgt.</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk08_03">
+                                                        <label class="form-check-label" for="chk08_03">Business Vehicle Mgt.</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk08_04">
+                                                        <label class="form-check-label" for="chk08_04">Provisioning Mgt.</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk08_05">
+                                                        <label class="form-check-label" for="chk08_05">Fleet Vehicle Group Mgt.</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk08_06">
+                                                        <label class="form-check-label" for="chk08_06">Maintenance Mgt.</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk08_07">
+                                                        <label class="form-check-label" for="chk08_07">Dealer Mapping Mgt.</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk09_01">
+                                                        <label class="form-check-label" for="chk09_01">System Mgt.</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </th>
+                                        <td>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk09_02">
+                                                        <label class="form-check-label" for="chk09_02">Notice Board Mgt.</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk09_03">
+                                                        <label class="form-check-label" for="chk09_03">User Usage History</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk09_04">
+                                                        <label class="form-check-label" for="chk09_04">Business Mgt</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk09_05">
+                                                        <label class="form-check-label" for="chk09_05">Account Mgt.</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk09_06">
+                                                        <label class="form-check-label" for="chk09_06">Menu Mgt.</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk09_07">
+                                                        <label class="form-check-label" for="chk09_07">Code Mgt.</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk09_08">
+                                                        <label class="form-check-label" for="chk09_08">Authority Mgt.</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk09_09">
+                                                        <label class="form-check-label" for="chk09_09">SMS Mgt.</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                            <fieldset>
+                                                <div class="form-check-list">
+                                                    <div class="form-check small">
+                                                        <input class="form-check-input" type="checkbox" value="" id="chk09_10">
+                                                        <label class="form-check-label" for="chk09_10">Language Mgt.</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="btn-wrap">
+                        <button type="button" class="btn btn-md btn-outline-secondary">Cancel</button>
+                        <button class="btn btn-md btn-primary" type="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="logo"><button class="logo-link"><span class="blind">HYUNDAI MOTOR GROUP</span></button></div>
+            <div class="f-link">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Legal Notice</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Hyundai Worldwide</a></li>
+                    <!-- <li><a href="#">TBD</a></li> -->
+                </ul>
+                <p class="copyright">Copyright 2022 hyundai motor company. All right reserved.</p>
+            </div>
+        </footer>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.2.1/dist/js/coreui.bundle.min.js" crossorigin="anonymous"></script>
+	<script language="JavaScript" type="text/javascript" charset="utf-8" src="../js/jquery-3.6.0.min.js"></script>
+	<script language="JavaScript" type="text/javascript" charset="utf-8" src="../js/ui.js"></script>
+</body>
+</html>
