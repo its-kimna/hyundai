@@ -1704,6 +1704,9 @@ footer > div .copyright {
   margin-left: 10px;
   color: #080707;
 }
+.wrap .container .content .title-area .page-title em {
+  color: #2d6894;
+}
 .wrap .container .content .title-area .desc {
   margin-top: 8px;
 }
@@ -2464,11 +2467,11 @@ footer > div .copyright {
   color: #999;
   padding-top: 10px;
 }
-.wrap .view-info .view-date {
+.wrap .view-info span {
   margin-left: 20px;
   position: relative;
 }
-.wrap .view-info .view-date:before {
+.wrap .view-info span:last-child:before {
   content: "";
   width: 1px;
   height: 15px;
@@ -4620,7 +4623,7 @@ footer > div .copyright {
   width: 20%;
   min-height: 188px;
   height: auto;
-  padding: 24px 30px;
+  padding: 24px 24px;
   border: 1px solid #e5e5e5;
   background: #fff;
   border: 1px solid #e5e5e5;
@@ -6626,6 +6629,9 @@ footer > div .copyright {
   border-top-right-radius: 0;
   border-bottom: 1px solid #fff;
 }
+.wrap .sms-content {
+  margin-top: 30px;
+}
 .wrap .sms-content .search-wrap .group-box {
   gap: 10px;
 }
@@ -6652,21 +6658,55 @@ footer > div .copyright {
   padding: 20px 30px;
   background: #fafaf9;
 }
+.wrap .sms-content .view-content .text, .wrap .sms-content .write-content .text {
+  flex: 1;
+}
 .wrap .sms-content .view-content .text-list, .wrap .sms-content .write-content .text-list {
   line-height: 24px;
 }
 .wrap .sms-content .view-content .text-list .title, .wrap .sms-content .write-content .text-list .title {
-  flex: 0 143px;
+  flex: 0 200px;
   color: #999;
-}
-.wrap .sms-content .view-content .text-list .text, .wrap .sms-content .write-content .text-list .text {
-  flex: 1;
 }
 .wrap .sms-content .view-content .text-list li, .wrap .sms-content .write-content .text-list li {
   display: flex;
 }
+.wrap .sms-content .view-content .text-list li .vcenter, .wrap .sms-content .write-content .text-list li .vcenter {
+  line-height: 178px;
+}
+.wrap .sms-content .view-content .text-list li .twoLine, .wrap .sms-content .write-content .text-list li .twoLine {
+  display: block;
+}
+.wrap .sms-content .view-content .text-list li .twoLine .text, .wrap .sms-content .write-content .text-list li .twoLine .text {
+  display: block;
+  margin-bottom: 15px;
+}
+.wrap .sms-content .view-content .text-list li .twoLine .text .img-country, .wrap .sms-content .write-content .text-list li .twoLine .text .img-country {
+  margin-right: 10px;
+}
+.wrap .sms-content .view-content .text-list li .twoLine .text:last-child, .wrap .sms-content .write-content .text-list li .twoLine .text:last-child {
+  margin-bottom: 0;
+}
+.wrap .sms-content .view-content .text-list li .twoLine.form-check-list, .wrap .sms-content .write-content .text-list li .twoLine.form-check-list {
+  display: block;
+  width: 100%;
+}
+.wrap .sms-content .view-content .text-list li .twoLine.form-check-list .text, .wrap .sms-content .write-content .text-list li .twoLine.form-check-list .text {
+  display: flex;
+  flex: 1;
+}
+.wrap .sms-content .view-content .text-list li .twoLine.form-check-list .text .img-country, .wrap .sms-content .write-content .text-list li .twoLine.form-check-list .text .img-country {
+  margin-right: 15px;
+  line-height: 80px;
+}
+.wrap .sms-content .view-content .text-list li .twoLine.form-check-list .text .img-country img, .wrap .sms-content .write-content .text-list li .twoLine.form-check-list .text .img-country img {
+  vertical-align: middle;
+}
+.wrap .sms-content .view-content .text-list li .twoLine.form-check-list .text .inp-basic, .wrap .sms-content .write-content .text-list li .twoLine.form-check-list .text .inp-basic {
+  width: 100%;
+}
 .wrap .sms-content .view-content .text-list li ~ li, .wrap .sms-content .write-content .text-list li ~ li {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .wrap .sms-content .view-content .form-check-list .form-check, .wrap .sms-content .write-content .form-check-list .form-check {
   line-height: 24px;
@@ -6683,6 +6723,72 @@ footer > div .copyright {
 .wrap .sms-content .view-content .edit-control, .wrap .sms-content .write-content .edit-control {
   top: -50px;
   right: 0;
+}
+.wrap .sms-content .table-wrap {
+  position: relative;
+}
+.wrap .sms-content .table-wrap .table {
+  width: 100%;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.wrap .sms-content .table-wrap .table th {
+  padding: 8px 0 8px 20px;
+  background-color: #fafaf9;
+  font-size: 14px;
+  color: #999;
+  vertical-align: middle;
+  font-weight: 500;
+}
+.wrap .sms-content .table-wrap .table th.on {
+  color: #333;
+}
+.wrap .sms-content .table-wrap .table tr {
+  border-top: 1px solid #e5e5e5;
+  text-align: left;
+}
+.wrap .sms-content .table-wrap .table td {
+  display: flex;
+  gap: 30px;
+  padding: 8px 0 8px 20px;
+  text-align: left;
+  font-size: 15px;
+  line-height: 34px;
+  border-bottom: 0;
+}
+.wrap .sms-content .table-wrap .table td span {
+  display: block;
+  color: #999;
+}
+.wrap .sms-content .table-wrap .table td span.on {
+  color: #333;
+}
+.wrap .sms-content .table-wrap .table .form-check-list {
+  padding-top: 7px;
+}
+.wrap .sms-content .table-wrap .table .form-check {
+  display: inline-block;
+  margin-bottom: 0;
+  width: 100%;
+  height: 15px;
+  padding: 0;
+}
+.wrap .sms-content .table-wrap .table .form-check.small .form-check-label {
+  font-size: 14px;
+  color: #999;
+  line-height: 16px;
+}
+.wrap .sms-content .table-wrap .table .form-check.small .form-check-label.on {
+  color: #333;
+}
+.wrap .sms-content .table-wrap .table .form-check.small .form-check-input[type=checkbox] {
+  top: -2px;
+  margin-right: 10px;
+}
+.wrap .sms-content .table-wrap .edit-control {
+  position: absolute;
+  top: -48px;
+  right: 26px;
 }
 .wrap .sms-staus {
   display: inline-block;

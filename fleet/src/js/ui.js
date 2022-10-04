@@ -53,6 +53,17 @@ $(function(){
 		}
 	});
 
+    // 체크 on label 컬러값 활성화
+    $(".form-check.small .form-check-input").on('click', function(e){
+		if($(this).is(":checked")){
+            $(this).siblings('.form-check-label').addClass('on').siblings().find('input').prop('checked',true);
+		}else{
+			$(this).siblings('.form-check-label').removeClass('on').siblings().find('input').prop('checked',false);
+		}
+	});
+
+    
+
 })
 
 function defaultSwiper(){
