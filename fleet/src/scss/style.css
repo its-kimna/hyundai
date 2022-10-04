@@ -2229,41 +2229,23 @@ footer > div .copyright {
   height: 108px;
   padding: 10px 22.5px;
   border: 1px solid #e5e5e5;
-  background: #fff;
+  background: #f7f7f8;
 }
 .wrap .flex-box.item-list-type .flex-item > span {
   display: block;
   text-align: center;
-  color: #999;
 }
 .wrap .flex-box.item-list-type .flex-item > div {
   display: flex;
   margin-top: 10px;
-  flex-direction: row;
-  justify-content: center;
 }
 .wrap .flex-box.item-list-type .flex-item > div .ico-status {
   display: inline-block;
   width: 48px;
   height: 48px;
-  margin-right: 20px;
+  margin-right: auto;
   border-radius: 50%;
-  background-color: #2d6894;
-}
-.wrap .flex-box.item-list-type .flex-item > div .ico-drivingD {
-  background: url("../assets/images/icon_drivingDist.svg") no-repeat left 50%/48px auto;
-}
-.wrap .flex-box.item-list-type .flex-item > div .ico-drivingH {
-  background: url("../assets/images/icon_drivingHr.svg") no-repeat left 50%/48px auto;
-}
-.wrap .flex-box.item-list-type .flex-item > div .ico-HydrogenC {
-  background: url("../assets/images/icon_consumption.svg") no-repeat left 50%/48px auto;
-}
-.wrap .flex-box.item-list-type .flex-item > div .ico-HydrogenE {
-  background: url("../assets/images/icon_efficiency.svg") no-repeat left 50%/48px auto;
-}
-.wrap .flex-box.item-list-type .flex-item > div .ico-co2S {
-  background: url("../assets/images/icon_co2Savings.svg") no-repeat left 50%/48px auto;
+  background-color: #d9d9d9;
 }
 .wrap .flex-box.item-list-type .flex-item > div strong {
   font-size: 48px;
@@ -2277,7 +2259,6 @@ footer > div .copyright {
   font-size: 20px;
   color: #999;
   font-weight: normal;
-  letter-spacing: 0;
 }
 .wrap .flex-box.fix-size {
   height: 592px;
@@ -2335,15 +2316,6 @@ footer > div .copyright {
   height: 48px;
   border-radius: 50%;
   background-color: #d9d9d9;
-}
-.wrap .flex-box.item-list-type2 .flex-item > div .ico-Overdue {
-  background: url("../assets/images/icon-Overdue.svg") no-repeat left 50%/48px auto;
-}
-.wrap .flex-box.item-list-type2 .flex-item > div .ico-Due {
-  background: url("../assets/images/icon-Due.svg") no-repeat left 50%/48px auto;
-}
-.wrap .flex-box.item-list-type2 .flex-item > div .ico-Upcoming {
-  background: url("../assets/images/icon-Upcoming.svg") no-repeat left 50%/48px auto;
 }
 .wrap .flex-box.item-list-type2 .flex-item > div strong {
   font-size: 48px;
@@ -6375,6 +6347,7 @@ footer > div .copyright {
   width: 30px;
   height: 30px;
   box-sizing: border-box;
+  border: 1px solid #e5e5e5;
   border-radius: 5px;
   position: relative;
   order: 4;
@@ -6389,7 +6362,7 @@ footer > div .copyright {
   left: 8px;
   width: 9px;
   height: 9px;
-  border: 2px solid #706e6b;
+  border: 2px solid #76808c;
   border-left: 0;
   border-top: 0;
   transform: rotate(225deg);
@@ -6399,6 +6372,7 @@ footer > div .copyright {
   width: 30px;
   height: 30px;
   box-sizing: border-box;
+  border: 1px solid #e5e5e5;
   border-radius: 5px;
   position: relative;
   order: 4;
@@ -6413,7 +6387,7 @@ footer > div .copyright {
   left: 8px;
   width: 9px;
   height: 9px;
-  border: 2px solid #706e6b;
+  border: 2px solid #76808c;
   border-left: 0;
   border-top: 0;
   transform: rotate(45deg);
@@ -6468,7 +6442,7 @@ footer > div .copyright {
 .wrap .sys-section .section .rc-tree .rc-tree-list .btn-box .btn-add:before {
   width: 18px;
   height: 2px;
-  background: #706e6b;
+  background: #76808c;
   position: absolute;
   top: 8px;
   left: 1px;
@@ -6477,7 +6451,7 @@ footer > div .copyright {
 .wrap .sys-section .section .rc-tree .rc-tree-list .btn-box .btn-add:after {
   width: 2px;
   height: 18px;
-  background: #706e6b;
+  background: #76808c;
   position: absolute;
   top: 1px;
   left: 9px;
@@ -7030,42 +7004,17 @@ footer > div .copyright {
   top: 360px;
   left: 68%;
 }
-.wrap .map-pin-info.pin6 {
-  top: 730px;
-  left: 20%;
-}
-.wrap .map-pin-info.pin7 {
-  top: 700px;
-  left: 65%;
-}
-.wrap .map-pin-info.pin8 {
-  top: 343px;
-  left: 13%;
-}
-.wrap .map-pin-info.pin9 {
-  top: 320px;
-  left: 42%;
-}
 .wrap .map-pin-info.on .map-pin {
   background: url("../assets/images/ico-pin-on.svg") no-repeat 50% 50%/32px auto;
 }
 .wrap .map-pin-info.green .map-pin {
-  background: url("../assets/images/ico-pin-greenOFF.svg") no-repeat 50% 50%/32px auto;
-}
-.wrap .map-pin-info.green.on .map-pin {
-  background: url("../assets/images/ico-pin-greenON.svg") no-repeat 50% 50%/32px auto;
+  background: url("../assets/images/ico-pin-green.svg") no-repeat 50% 50%/32px auto;
 }
 .wrap .map-pin-info.yellow .map-pin {
-  background: url("../assets/images/ico-pin-yellowOFF.svg") no-repeat 50% 50%/32px auto;
+  background: url("../assets/images/ico-pin-yellow.svg") no-repeat 50% 50%/32px auto;
 }
-.wrap .map-pin-info.yellow.on .map-pin {
-  background: url("../assets/images/ico-pin-yellowON.svg") no-repeat 50% 50%/32px auto;
-}
-.wrap .map-pin-info.yg .map-pin {
-  background: url("../assets/images/ico-pin-yellowOFF.svg") no-repeat 50% 50%/32px auto;
-}
-.wrap .map-pin-info.yg.on .map-pin {
-  background: url("../assets/images/ico-pin-yellowON.svg") no-repeat 50% 50%/32px auto;
+.wrap .map-pin-info.yellowOn .map-pin {
+  background: url("../assets/images/ico-pin-yellowOn.svg") no-repeat 50% 50%/32px auto;
 }
 .wrap .result-area {
   width: 361px;
@@ -7921,7 +7870,6 @@ footer > div .copyright {
   font-size: 11px;
   color: #080707 !important;
   box-sizing: border-box;
-  font-style: normal;
 }
 .wrap.newsletter .container .content .flex-item .ico-status:after {
   content: "";
@@ -8099,35 +8047,7 @@ footer > div .copyright {
   top: 12px;
   left: 50%;
   transform: translateX(-50%);
-  background-size: 51px 50px;
-}
-.wrap.newsletter .container .swiper .swiper-wrapper .swiper-item i.ico-steering:after {
-  background: url("../assets/images/icon_Steering.png") no-repeat;
-  background-size: 51px 50px;
-}
-.wrap.newsletter .container .swiper .swiper-wrapper .swiper-item i.ico-Brake:after {
-  background: url("../assets/images/ico-Brake.png") no-repeat;
-  background-size: 51px 50px;
-}
-.wrap.newsletter .container .swiper .swiper-wrapper .swiper-item i.ico-Driving:after {
-  background: url("../assets/images/ico-Driving.png") no-repeat;
-  background-size: 51px 50px;
-}
-.wrap.newsletter .container .swiper .swiper-wrapper .swiper-item i.ico-Suspension:after {
-  background: url("../assets/images/ico-Suspension.png") no-repeat;
-  background-size: 51px 50px;
-}
-.wrap.newsletter .container .swiper .swiper-wrapper .swiper-item i.ico-Powertrain:after {
-  background: url("../assets/images/ico-Powertrain.png") no-repeat;
-  background-size: 51px 50px;
-}
-.wrap.newsletter .container .swiper .swiper-wrapper .swiper-item i.ico-Electric:after {
-  background: url("../assets/images/ico-Electric.png") no-repeat;
-  background-size: 51px 50px;
-}
-.wrap.newsletter .container .swiper .swiper-wrapper .swiper-item i.ico-Stack:after {
-  background: url("../assets/images/ico-Stack.png") no-repeat;
-  background-size: 51px 50px;
+  background-color: #0099cb;
 }
 .wrap.newsletter .container .swiper .swiper-wrapper .swiper-item .ico-carGood {
   display: inline-block;
