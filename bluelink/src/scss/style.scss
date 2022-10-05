@@ -442,13 +442,18 @@ caption{overflow:hidden;margin-left:-9999px;width:1px;height:1px;font-size:1px;l
     }
 
     .table-wrap{position:relative;
-        .stitle{height:40px;line-height:16px;margin:0 0 20px 20px;padding-top:24px;
-            + .tbl-btn-group {position:absolute;top:0px;right:0;}
+        .form-check{display:inline-block;margin-bottom:0;width:15px;height:15px;padding:0;
+            .form-check-input{float:inherit;margin-left:0}
         }
-        .table{clear:both;width:100%;border-radius:10px;overflow:hidden;box-shadow:0px 1px 7px 0 rgba($col-black, 0.05);position:relative;margin-top:20px;
-            &.datatable {margin:20px 0 !important}
+        .link-text{color:#333}
+        .stitle{height:40px;line-height:16px;margin:0 0 20px 20px;padding-top:24px;
+            + .tbl-btn-group{position:absolute;top:0px;right:0}
+            .col-point3{color:$col-point2;margin-left:15px}
+        }
+        .table{clear:both;width:100%;overflow:hidden;position:relative;margin-top:20px;border-top:1px solid $col-lightGray;
+            &.datatable{margin:20px 0 !important}
             &.table-col{
-                thead th{background:$col-lightGray;line-height:24px;padding:13px 0;text-align:center;vertical-align: middle;position:relative;
+                thead th{background:$bg-color2;line-height:24px;padding:13px 0;text-align:center;vertical-align:middle;position:relative;
                     // &:first-child{text-align:center}
                     .tbl-select{display:inline-block;padding-right:20px;position:relative;
                         &:before{content:"";width:0px;height:0px;border-top:6px solid $col-default;border-left:5px solid transparent;border-right:5px solid transparent;position:absolute;top:10px;right:0}
@@ -457,32 +462,34 @@ caption{overflow:hidden;margin-left:-9999px;width:1px;height:1px;font-size:1px;l
                 }
                 tbody{background:$col-white;
                     th{text-align:center;font-weight:400;line-height:24px;padding:13px 0;color:#6c757d}
-                    td{text-align:center;color:#6c757d;line-height:24px;padding:13px 0;vertical-align:middle}
+                    td{text-align:center;color:#6c757d;line-height:24px;padding:13px 0;vertical-align:middle;
+                        &.text-left{text-align:left;padding-left:20px}
+                    }
                     tr ~ tr{border-top:1px solid $col-lightGray}
-                    .nodata {text-align: center;padding:70px 0;font-size:18px;color:$col-lightGray2;
-                        p {line-height: 40px;
-                            .tbl-ico-nodata {display:inline-block;width:40px;height:40px;margin-right:22px;vertical-align:middle;background:url($assetPath + "ico-nodata.svg") no-repeat 50% 50%/40px auto;}
+                    .nodata{text-align:center;padding:70px 0;font-size:18px;color:$col-lightGray2;
+                        p{line-height:40px;
+                            .tbl-ico-nodata{display:inline-block;width:48px;height:48px;border-radius:50%;margin-right:22px;vertical-align:middle;background:#f2f0ee url($assetPath + "ico-nodata.svg") no-repeat 50% 50%/24px auto}
                         }
                     }
                 }
             }
-            &.table-row{border:1px solid #e5e5e5;border-radius:0;
-                thead th{background:#f7f7f8;line-height:16px;padding:18px 0 15px;text-align:center;vertical-align: middle;position:relative;border-left:1px solid #e5e5e5;font-size:16px;
+            &.table-row{border:1px solid $col-lightGray;border-radius:0;
+                thead th{background:#f7f7f8;line-height:16px;padding:18px 0 15px;text-align:center;vertical-align:middle;position:relative;border-left:1px solid $col-lightGray;font-size:16px;
                     // &:first-child{text-align:center}
                     .tbl-select{display:inline-block;padding-right:20px;position:relative;
-                        &:before{content:"";width:0px;height:0px;border-top:6px solid #e5e5e5;border-left:5px solid transparent;border-right:5px solid transparent;position:absolute;top:10px;right:0}
+                        &:before{content:"";width:0px;height:0px;border-top:6px solid $col-lightGray;border-left:5px solid transparent;border-right:5px solid transparent;position:absolute;top:10px;right:0}
                         .form-select{width:calc(100% + 20px);background:transparent;border:none;padding:0;font-weight:500;position:relative}
                     }
                 }
                 tbody{background:$col-white;
-                    th{text-align:center;font-weight:500;font-size:16px;line-height:24px;padding:13px 0;color:#000000; background:#f7f7f8;vertical-align: middle;}
-                    td{text-align:center;font-size:36px;color:#000;line-height:36px;padding:23px 20px 20px;font-weight:500;vertical-align:middle;border-left:1px solid #e5e5e5;
-                        input {font-size:36px;font-weight:500;color:#000;text-align: center;border-color: #e5e5e5;;}
+                    th{text-align:center;font-weight:500;font-size:16px;line-height:24px;padding:13px 0;color:$col-black;background:#f7f7f8;vertical-align:middle}
+                    td{text-align:center;font-size:36px;color:$col-black;line-height:36px;padding:23px 20px 20px;font-weight:500;vertical-align:middle;border-left:1px solid $col-lightGray;
+                        input{font-size:36px;font-weight:500;color:$col-black;text-align:center;border-color:$col-lightGray}
                     }
                     tr ~ tr{border-top:1px solid $col-lightGray}
-                    .nodata {text-align: center;padding:70px 0;font-size:18px;color:$col-lightGray2;
-                        p {line-height: 40px;
-                            .tbl-ico-nodata {display:inline-block;width:40px;height:40px;margin-right:22px;vertical-align:middle;background:url($assetPath + "ico-nodata.svg") no-repeat 50% 50%/40px auto;}
+                    .nodata{text-align:center;padding:70px 0;font-size:18px;color:$col-lightGray2;
+                        p{line-height:40px;
+                            .tbl-ico-nodata{display:inline-block;width:40px;height:40px;margin-right:22px;vertical-align:middle;background:url($assetPath + "ico-nodata.svg") no-repeat 50% 50%/40px auto}
                         }
                     }
                 }
@@ -915,7 +922,7 @@ caption{overflow:hidden;margin-left:-9999px;width:1px;height:1px;font-size:1px;l
                                     &.dtc-info {margin-left:0;
                                         li {padding:0px;margin:0px 0 10px;display:flex;line-height:38px;vertical-align: middle;
                                             em {flex:0 0 118px;color:$col-black;font-weight:500;}
-                                            span {display:block;color:$col-default;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;}
+                                            span {display:block;color:$col-default;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
                                             
                                             &:last-child {display:block; margin-bottom:0;padding-top:5px;border-top:1px solid $col-lightGray;
                                                 em {display:block;}
