@@ -7,10 +7,138 @@
 	<title>bluelink</title>
 
     <link href="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro@4.2.1/dist/css/coreui.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../scss/dataTables.bootstrap4.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-	<link rel="stylesheet" type="text/css" href="../scss/style.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        /* reset */
+        *{-webkit-text-size-adjust:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+        html{margin:0;width:100%;height:100%}
+        body{/*height:100%;*/background:$col-white;font-family:'Hyundai Sans Head Office', Arial,'TextRegular', Helvetica,"Apple SD Gothic Neo",sans-serif;font-size:15px;font-weight:400;line-height:1.5;color:$col-black;word-wrap:break-word;word-break:keep-all}
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,select,textarea,p,blockquote,th,td,button, figure{margin:0;padding:0}
+        section,nav,article,aside,hgroup,header,footer,iframe{display:block}
+        form,fieldset,img,input,button{border:0 none;background:none}
+        img{margin:0;padding:0;line-height:0;vertical-align:top}
+        em{font-style:normal}
+        strong{font-weight:600}
+        ul,ol,li{list-style:none outside}
+        ul:after,ol:after{content:'';display:block;clear:both}
+        a:focus,button:focus{outline:1px solid #3a67ff}
+        a{text-decoration:none}
+        legend{display:block;width:0;height:0;text-indent:-9000px;overflow:hidden}
+        caption{overflow:hidden;margin-left:-9999px;width:1px;height:1px;font-size:1px;line-height:0}
+
+        /* common */
+        .blind{position:absolute;top:-9999em;font-size:0;height:0}
+        .esse{display:inline-block;color:$col-point;font-size:0;position:relative;}
+        .esse:before{content:"*";display:inline-block;font-size:16px;margin-left:3px}
+        
+        .wrap.newsletter {min-width: 700px;max-width: 700px;margin: 0 auto;border: 1px solid #e5e5e5;}
+        .wrap.newsletter header {padding: 20px 20px 20px 30px;height: 90px;background: #1a252d;-webkit-box-sizing: border-box;box-sizing: border-box;}
+        .wrap.newsletter header .flex-row {display: -webkit-box;display: -ms-flexbox;display: flex;flex-direction: row!important;}
+        .wrap.newsletter header .logo {display: inline-block;width: 83px;height: 36px;background: url("../assets/images/logo.png") no-repeat 0 0/100% auto;vertical-align: top;}
+        .wrap.newsletter header .logo .logo-link {display: block;width: 100%;height: 100%;}
+        .wrap.newsletter header .left {margin-right: auto;}
+        .wrap.newsletter header .left p {margin-top: 6px;color: #fff;font-size: 12px;line-height: 14px;font-weight: normal;opacity: .5;}
+        .wrap.newsletter header .right {text-align: right;}
+        .wrap.newsletter header .right p {color: #fff;}
+        .wrap.newsletter header .right p:last-child {color: #448cc2;font-size: 12px;line-height: 14px;font-weight: normal;}
+        .wrap.newsletter header .right .monthly {color: #fff;font-size: 12px;line-height: 14px;font-weight: normal;}
+        .wrap.newsletter header .right .tit {font-size: 18px;line-height: 21px;}
+        .wrap.newsletter .container {display: block;padding: 0;}
+        .wrap.newsletter .container .top-area {display: -webkit-box;display: -ms-flexbox;display: flex;padding: 20px 30px;color: #fff;background-color: #2d6894;}
+        .wrap.newsletter .container .top-area .userInfo {-webkit-box-flex: 0;    -ms-flex: 0 0 205px;        flex: 0 0 205px;position: relative;}
+        .wrap.newsletter .container .top-area .userInfo dl {padding-top: 10px;}
+        .wrap.newsletter .container .top-area .userInfo dl dt {height: 16px;font-size: 14px;line-height: 16px;font-weight: normal;margin-bottom: 4px;}
+        .wrap.newsletter .container .top-area .userInfo dl dd {height: 18px;font-size: 16px;line-height: 18px;font-weight: bold;}
+        .wrap.newsletter .container .top-area .userInfo:after {content: '';position: absolute;top: 50%;right: 0;display: inline-block;width: 1px;height: 80px;background-color: rgba(255, 255, 255, 0.2);-webkit-transform: translateY(-50%);        transform: translateY(-50%);}
+        .wrap.newsletter .container .top-area .vehicleInfo {-webkit-box-flex: 1;    -ms-flex: 1;        flex: 1;padding-left: 30px;}
+        .wrap.newsletter .container .top-area .vehicleInfo .list li {display: -webkit-box;display: -ms-flexbox;display: flex;height: 16px;margin-top: 10px;font-size: 14px;line-height: 16px;}
+        .wrap.newsletter .container .top-area .vehicleInfo .list li:first-child {margin-top: 0;}
+        .wrap.newsletter .container .top-area .vehicleInfo .list li span {-webkit-box-flex: 1;    -ms-flex: 1;        flex: 1;color: rgba(255, 255, 255, 0.5);}
+        .wrap.newsletter .container .top-area .vehicleInfo .list li p {-webkit-box-flex: 1;    -ms-flex: 1;        flex: 1;}
+        .wrap.newsletter .container .content {padding: 24px 30px 30px;}
+        .wrap.newsletter .container .content > div {margin-bottom: 30px;}
+        .wrap.newsletter .container .content > div:last-child {margin-bottom: 0;}
+        .wrap.newsletter .container .content .head-area {margin-bottom: 13px;display: -webkit-box;display: -ms-flexbox;display: flex;}
+        .wrap.newsletter .container .content .head-area.noflex {display: block;}
+        .wrap.newsletter .container .content .head-area h2 {font-size: 16px;line-height: 20px;color: #000;margin-right: auto;}
+        .wrap.newsletter .container .content .head-area p {font-size: 12px;line-height: 20px;color: #999;}
+        .wrap.newsletter .container .content .flex {display: -webkit-box;display: -ms-flexbox;display: flex;gap: 10px;}
+        .wrap.newsletter .container .content .flex-item {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-webkit-box-flex: 1;-ms-flex: 1;flex: 1;padding: 12px 7px;border: 1px solid #e5e5e5;text-align: center;height: 113px;-webkit-box-sizing: border-box;box-sizing: border-box;}
+        .wrap.newsletter .container .content .flex-item strong {font-size: 13px;color: #080707;line-height: 14px;text-align: center;vertical-align: middle;}
+        .wrap.newsletter .container .content .flex-item div {margin-top: auto;}
+        .wrap.newsletter .container .content .flex-item span {font-size: 11px;color: #080707;}
+        .wrap.newsletter .container .content .flex-item .ico-status {position: relative;display: block;padding-top: 41px;height: 52px;font-size: 11px;color: #080707 !important;-webkit-box-sizing: border-box;box-sizing: border-box;}
+        .wrap.newsletter .container .content .flex-item .ico-status:after {content: "";width: 36px;height: 36px;border-radius: 50%;position: absolute;top: 0;left: 50%;-webkit-transform: translateX(-50%);transform: translateX(-50%);}
+        .wrap.newsletter .container .content .flex-item .ico-status.status-good {color: #00a651;}
+        .wrap.newsletter .container .content .flex-item .ico-status.status-good:after {background: url("../assets/images/ico-good.svg") no-repeat 50% 50%/100% auto;}
+        .wrap.newsletter .container .content .flex-item .ico-status.status-caution {color: #fad648;}
+        .wrap.newsletter .container .content .flex-item .ico-status.status-caution:after {background: url("../assets/images/ico-caution.png") no-repeat 50% 50%/100% auto;}
+        .wrap.newsletter .container .content .flex-item .ico-status.status-alert {color: #2d6894;}
+        .wrap.newsletter .container .content .flex-item .ico-status.status-alert:after {background: url("../assets/images/ico-alert.png") no-repeat 50% 50%/100% auto;}
+        .wrap.newsletter .container .content .flex-item .ico-status.status-danger {color: #e89261;}
+        .wrap.newsletter .container .content .flex-item .ico-status.status-danger:after {background: url("../assets/images/ico-danger02.svg") no-repeat 50% 50%/100% auto;}
+        .wrap.newsletter .container .content .flex-item .ico-status.status-unknown {color: #76808c;}
+        .wrap.newsletter .container .content .flex-item .ico-status.status-unknown:after {background: url("../assets/images/ico-unknown.png") no-repeat 50% 50%/100% auto;}
+        .wrap.newsletter .container .content .text-area {margin: 20px 0 10px;font-size: 12px;line-height: 20px;color: #999;}
+        .wrap.newsletter .container .content table {border-top: 2px solid #e5e5e5;text-align: center;color: #333;vertical-align: middle;}
+        .wrap.newsletter .container .content th {padding: 12px;border-bottom: 1px solid #e5e5e5;border-left: 1px solid #e5e5e5;font-size: 13px;line-height: 20px;background-color: #fafaf9;vertical-align: middle;}
+        .wrap.newsletter .container .content td {padding: 12px 0;line-height: 20px;border-left: 1px solid #e5e5e5;font-size: 13px;vertical-align: middle;}
+        .wrap.newsletter .container .content td.none {color: #e89261;}
+        .wrap.newsletter .container .content thead th {text-align: center;}
+        .wrap.newsletter .container .content thead th:first-child {border-left: 0;}
+        .wrap.newsletter .container .content thead th.leftline {border-left: 1px solid #e5e5e5;}
+        .wrap.newsletter .container .content tbody th {padding: 12px 0 0 12px;text-align: left;font-weight: normal;border-left: 0;}
+        .wrap.newsletter .container .slide {position: relative;width: 100%;padding: 0;background: #fff;-webkit-box-sizing: border-box;box-sizing: border-box;}
+        .wrap.newsletter .container .check-list-bottom {width: 100%;overflow: hidden;}
+        .wrap.newsletter .container .swiper {margin: 0 0px;-webkit-box-sizing: border-box;box-sizing: border-box;}
+        .wrap.newsletter .container .swiper .swiper-pagination {bottom: 0;}
+        .wrap.newsletter .container .swiper .swiper-pagination .swiper-pagination-bullet {width: 10px;height: 10px;border-radius: 5px;background: #adb5bd;margin: 0 5px;}
+        .wrap.newsletter .container .swiper .swiper-pagination .swiper-pagination-bullet-active {width: 30px;height: 10px;border-radius: 5px;background: #00a651;}
+        .wrap.newsletter .container .swiper {position: relative;margin: 0 0px;}
+        .wrap.newsletter .container .swiper .swiper-wrapper {height: 170px;-webkit-box-sizing: border-box;box-sizing: border-box;}
+        .wrap.newsletter .container .swiper .swiper-wrapper.nodata {width: 100%;}
+        .wrap.newsletter .container .swiper .swiper-wrapper.nodata .swiper-slide {-webkit-box-flex: 1;    -ms-flex: 1;        flex: 1;width: 100% !important;margin: 0 !important;}
+        .wrap.newsletter .container .swiper .swiper-wrapper.col2 .swiper-slide:last-child {width: calc(66.666666% - 20px) !important;}
+        .wrap.newsletter .container .swiper .swiper-wrapper.col3 .swiper-slide {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-pack: distribute;justify-content: space-around;-webkit-box-align: center;-ms-flex-align: center;align-items: center;width: calc(33.33333% - 20px) !important;margin: 0 10px;background-color: #fff;border: 1px solid #e5e5e5;-webkit-box-sizing: border-box;box-sizing: border-box;}
+        .wrap.newsletter .container .swiper .swiper-wrapper .swiper-item {padding: 0px;display: block;width: 100%;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;text-align: center;-webkit-box-sizing: border-box;box-sizing: border-box;}
+        .wrap.newsletter .container .swiper .swiper-wrapper .swiper-item i {position: relative;display: block;padding-top: 72px;height: 89px;font-size: 15px;font-style: normal;font-weight: bold;color: #080707 !important;-webkit-box-sizing: border-box;box-sizing: border-box;}
+        .wrap.newsletter .container .swiper .swiper-wrapper .swiper-item i:after {content: "";width: 50px;height: 50px;border-radius: 50%;position: absolute;top: 12px;left: 50%;-webkit-transform: translateX(-50%);transform: translateX(-50%);background-color: #fff;}
+        /* i */
+        .ico-steering:after {background:url(../assets/images/icon_Steering.png) no-repeat 50% 50% /51px 50px;}
+        .ico-Brake:after {background:url(../assets/images/ico-Brake.png) no-repeat 50% 50% /51px 50px;}
+        .ico-Driving:after {background:url(../assets/images/ico-Driving.png) no-repeat 50% 50% /51px 50px;}
+        .ico-Suspension:after {background:url(../assets/images/ico-Suspension.png) no-repeat 50% 50% /51px 50px;}
+        .ico-Powertrain:after {background:url(../assets/images/ico-Powertrain.png) no-repeat 50% 50% /51px 50px;}
+        .ico-Electric:after {background:url(../assets/images/ico-Electric.png) no-repeat 50% 50% /51px 50px;}
+        .ico-Stack:after {background:url(../assets/images/ico-Stack.png) no-repeat 50% 50% /51px 50px;}
+
+        .wrap.newsletter .container .swiper .swiper-wrapper .swiper-item .ico-carGood {display: inline-block;margin: 0 auto;padding-top: 5px;text-align: center;width: 36px;height: 36px;background: url("../assets/images/ico-carGood.svg") no-repeat;}
+        .wrap.newsletter .container .swiper .swiper-wrapper .swiper-item p {margin-top: 10px;font-family: HyundaiSansTextOffice;font-size: 15px;font-weight: 500;color: #333;}
+        .wrap.newsletter .container .swiper .swiper-wrapper .swiper-item .tit {font-family: HyundaiSansTextOffice;font-size: 15px;font-weight: 500;text-align: center;color: #999;}
+        .wrap.newsletter .container .swiper .swiper-wrapper .swiper-item ul {height: 69px;margin-top: 10px;padding: 8px 0 8px 10px;background-color: #fafaf9;-webkit-box-sizing: border-box;box-sizing: border-box;}
+        .wrap.newsletter .container .swiper .swiper-wrapper .swiper-item ul li {display: block;text-align: left;padding: 0;font-size: 12px;line-height: 18px;color: #080707;}
+        .wrap.newsletter .container .swiper .swiper-wrapper .swiper-item ul li:nth-child(1) {color: #080707;}
+        .wrap.newsletter .container .swiper .swiper-wrapper .swiper-item ul li:nth-child(2) {color: #080707;}
+        .wrap.newsletter .container .swiper .swiper-wrapper .swiper-item ul li:nth-child(3) {color: #080707;}
+        .wrap.newsletter .container .swiper .swiper-wrapper .swiper-item ul li::before {content: '·';display: inline-block;padding-right: 4px;font-size: 18px;line-height: 20px;color: #080707;}
+        .wrap.newsletter .container .swiper-btn-group {display: block;gap: 0px;position: absolute;top: 50%;right: 0px;width: 100%;height: 30px;-webkit-transform: translateY(-50%);transform: translateY(-50%);z-index: 100;}
+        .wrap.newsletter .container .swiper-button-prev, .wrap.newsletter .container .swiper-rtl .swiper-button-prev {position: absolute;top: 0;left: -30px;}
+        .wrap.newsletter .container .swiper-button-next, .wrap.newsletter .container .swiper-rtl .swiper-button-next {position: absolute;top: 0;left: 99%;}
+        .wrap.newsletter .container .swiper-button-next, .wrap.newsletter .container .swiper-button-prev {display: -webkit-box;display: -ms-flexbox;display: flex;width: 36px;height: 30px;margin-top: 0;color: #080707;border: 1px solid #fff;z-index: 1000;}
+        .wrap.newsletter .container .swiper-button-next:after, .wrap.newsletter .container .swiper-button-prev:after {font-size: 18px;}
+        .graph-draw {background: #ddd;}
+        footer {display: -webkit-box;display: -ms-flexbox;display: flex;width: 100%;height: 84px;margin: 0px 0px 0;padding: 20px 40px;border-top: 1px solid #e5e5e5;background-color: #000;}
+        footer .logo {display: inline-block;-webkit-box-flex: 0;-ms-flex: 0 0 69px;flex: 0 0 69px;width: 69px;height: 37px;margin-top: 0px;background: url("../assets/images/logo-footer.png") no-repeat 0 0/69px auto;vertical-align: top;}
+        footer .logo .logo-link {display: block;width: 100%;height: 100%;}
+        footer > div {-webkit-box-flex: 1;-ms-flex: 1 1 auto;flex: 1 1 auto;padding-left: 40px;}
+        footer > div ul {display: -webkit-box;display: -ms-flexbox;display: flex;width: 595px;gap: 40px;width: 610px;font-size: 14px;font-weight: bold;}
+        footer > div ul li {position: relative;}
+        footer > div ul li a {color: #f2f0ee;}
+        footer > div ul li:after {content: '';position: absolute;top: 7px;right: -20px;display: inline-block;width: 4px;height: 4px;background-color: #f2f0ee;}
+        footer > div ul li:last-child:after {display: none;}
+        footer > div .copyright {color: #999;font-size: 12px;margin-top: 10px;}
+    </style>
     <script>
         function col3Swiper(){
             var swiper = new Swiper(".col3-swiper", {
@@ -179,35 +307,30 @@
                             <strong>Airbag Control</strong>
                             <div>
                                 <i class="ico-status status-good">OK</i>
-                                <!-- <span class="text">OK</span> -->
                             </div>
                         </div>
                         <div class="flex-item">
                             <strong>TPMS</strong>
                             <div>
                                 <i class="ico-status status-unknown">unknown</i>
-                                <!-- <span class="text">OK</span> -->
                             </div>
                         </div>
                         <div class="flex-item">
                             <strong>Driving Assistance</strong>
                             <div>
                                 <i class="ico-status status-caution">caution</i>
-                                <!-- <span class="text">OK</span> -->
                             </div>
                         </div>
                         <div class="flex-item">
                             <strong>Motor Control</strong>
                             <div>
                                 <i class="ico-status status-alert">Inspection Required</i>
-                                <!-- <span class="text">Inspection Required</span> -->
                             </div>
                         </div>
                         <div class="flex-item">
                             <strong>ESC</strong>
                             <div>
                                 <i class="ico-status status-danger">Inspection Required</i>
-                                <!-- <span class="text">Inspection Required</span> -->
                             </div>
                         </div> 
                     </div>
@@ -226,19 +349,19 @@
                                     <div class="swiper-slide">
                                         <div class="swiper-item">
                                             <div>
-                                                <i class="ico-status status-good">Steering</i>
+                                                <i class="ico-message ico-steering">Steering</i>
                                             </div>
                                             <ul>
                                                 <li>Connection Part Play</li>
                                                 <li>Oil Leakage</li>
                                                 <li>Oil Level</li>
                                             </ul>
-                                        </div>
+                                        </div> 
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="swiper-item">
                                             <div>
-                                                <i class="ico-status status-good">Brake</i>
+                                                <i class="ico-message ico-Brake">Brake</i>
                                             </div>
                                             <ul>
                                                 <li>Hose And Pipe Condition</li>
@@ -249,7 +372,7 @@
                                     <div class="swiper-slide">
                                         <div class="swiper-item">
                                             <div>
-                                                <i class="ico-status status-good">Fuel Cell Stack</i>
+                                                <i class="ico-message ico-Driving">Driving</i>
                                             </div>
                                             <ul>
                                                 <li>Ion filter</li>
@@ -260,7 +383,7 @@
                                     <div class="swiper-slide">
                                         <div class="swiper-item">
                                             <div>
-                                                <i class="ico-status status-good">Steering</i>
+                                                <i class="ico-message ico-Suspension">Suspension</i>
                                             </div>
                                             <ul>
                                                 <li>Connection Part Play</li>
@@ -273,7 +396,29 @@
                                     <div class="swiper-slide">
                                         <div class="swiper-item">
                                             <div>
-                                                <i class="ico-status status-good">Steering</i>
+                                                <i class="ico-status ico-Powertrain">Powertrain</i>
+                                            </div>
+                                            <ul>
+                                                <li>Hose And Pipe Condition</li>
+                                                <li>APU Cartridge</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper-item">
+                                            <div>
+                                                <i class="ico-status ico-Electric">Electric</i>
+                                            </div>
+                                            <ul>
+                                                <li>Ion filter</li>
+                                                <li>Stack Coolant Check</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="swiper-item">
+                                            <div>
+                                                <i class="ico-status ico-Stack">Fuel cell stack</i>
                                             </div>
                                             <ul>
                                                 <li>Connection Part Play</li>
@@ -289,7 +434,6 @@
                                 <div class="swiper-button-prev"></div>
                                 <div class="swiper-button-next"></div>
                             </div>
-                            <!-- <div class="swiper-pagination"></div> -->
                         </div>
                     </div>
 

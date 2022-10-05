@@ -799,13 +799,13 @@ footer{display:flex;width:100%;height:84px;margin:0px 0px 0;padding:20px 40px;bo
     }
 
     .view-info{clear:both;color:$col-lightGray3;padding-top:10px;
-<<<<<<< HEAD
+
         span{margin-left:20px;position:relative;
             &:last-child:before{content:"";width:1px;height:15px;background:$col-lightGray;position:absolute;top:0;left:-12px}
-=======
+
         .view-author ~ .view-date, .view-date ~ .view-desc{margin-left:20px;position:relative;
             &:before{content:"";width:1px;height:15px;background:$col-lightGray;position:absolute;top:0;left:-12px}
->>>>>>> 44bcd2b8168e77b7de004aeb2b9e78f33ac52fea
+
         }
         .view-desc b{color:#080707;font-weight:500;display:inline-block;margin-left:7px}
     }

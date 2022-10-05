@@ -2006,13 +2006,11 @@ footer > div .copyright {
   margin-left: 10px;
   color: #080707;
 }
-<<<<<<< HEAD
+
 .wrap .container .content .title-area .page-title em {
   color: #2d6894;
 }
-=======
 
->>>>>>> 44bcd2b8168e77b7de004aeb2b9e78f33ac52fea
 .wrap .container .content .title-area .desc {
   margin-top: 8px;
 }
@@ -2970,13 +2968,14 @@ footer > div .copyright {
   color: #999;
   padding-top: 10px;
 }
-<<<<<<< HEAD
+
 .wrap .view-info span {
   margin-left: 20px;
   position: relative;
 }
 .wrap .view-info span:last-child:before {
-=======
+  
+}
 
 .wrap .view-info .view-author ~ .view-date, .wrap .view-info .view-date ~ .view-desc {
   margin-left: 20px;
@@ -2984,7 +2983,7 @@ footer > div .copyright {
 }
 
 .wrap .view-info .view-author ~ .view-date:before, .wrap .view-info .view-date ~ .view-desc:before {
->>>>>>> 44bcd2b8168e77b7de004aeb2b9e78f33ac52fea
+
   content: "";
   width: 1px;
   height: 15px;
@@ -8321,13 +8320,11 @@ footer > div .copyright {
   border-top-right-radius: 0;
   border-bottom: 1px solid #fff;
 }
-<<<<<<< HEAD
+
 .wrap .sms-content {
   margin-top: 30px;
 }
-=======
 
->>>>>>> 44bcd2b8168e77b7de004aeb2b9e78f33ac52fea
 .wrap .sms-content .search-wrap .group-box {
   gap: 10px;
 }
@@ -8361,27 +8358,26 @@ footer > div .copyright {
   padding: 20px 30px;
   background: #fafaf9;
 }
-<<<<<<< HEAD
+
 .wrap .sms-content .view-content .text, .wrap .sms-content .write-content .text {
   flex: 1;
 }
-=======
 
->>>>>>> 44bcd2b8168e77b7de004aeb2b9e78f33ac52fea
+
 .wrap .sms-content .view-content .text-list, .wrap .sms-content .write-content .text-list {
   line-height: 24px;
 }
 
 .wrap .sms-content .view-content .text-list .title, .wrap .sms-content .write-content .text-list .title {
-<<<<<<< HEAD
+
   flex: 0 200px;
   color: #999;
-}
-=======
-  -webkit-box-flex: 0;
+
+
+  /* -webkit-box-flex: 0;
       -ms-flex: 0 143px;
           flex: 0 143px;
-  color: #999;
+  color: #999; */
 }
 
 .wrap .sms-content .view-content .text-list .text, .wrap .sms-content .write-content .text-list .text {
@@ -8390,13 +8386,13 @@ footer > div .copyright {
           flex: 1;
 }
 
->>>>>>> 44bcd2b8168e77b7de004aeb2b9e78f33ac52fea
+
 .wrap .sms-content .view-content .text-list li, .wrap .sms-content .write-content .text-list li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-<<<<<<< HEAD
+
 .wrap .sms-content .view-content .text-list li .vcenter, .wrap .sms-content .write-content .text-list li .vcenter {
   line-height: 178px;
 }
@@ -8431,9 +8427,7 @@ footer > div .copyright {
 .wrap .sms-content .view-content .text-list li .twoLine.form-check-list .text .inp-basic, .wrap .sms-content .write-content .text-list li .twoLine.form-check-list .text .inp-basic {
   width: 100%;
 }
-=======
 
->>>>>>> 44bcd2b8168e77b7de004aeb2b9e78f33ac52fea
 .wrap .sms-content .view-content .text-list li ~ li, .wrap .sms-content .write-content .text-list li ~ li {
   margin-top: 20px;
 }
@@ -8458,7 +8452,7 @@ footer > div .copyright {
   top: -50px;
   right: 0;
 }
-<<<<<<< HEAD
+
 .wrap .sms-content .table-wrap {
   position: relative;
 }
@@ -8525,9 +8519,7 @@ footer > div .copyright {
   top: -48px;
   right: 26px;
 }
-=======
 
->>>>>>> 44bcd2b8168e77b7de004aeb2b9e78f33ac52fea
 .wrap .sms-staus {
   display: inline-block;
   vertical-align: 5px;
