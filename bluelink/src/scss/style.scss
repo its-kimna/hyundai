@@ -915,7 +915,7 @@ caption{overflow:hidden;margin-left:-9999px;width:1px;height:1px;font-size:1px;l
                                     &.dtc-info {margin-left:0;
                                         li {padding:0px;margin:0px 0 10px;display:flex;line-height:38px;vertical-align: middle;
                                             em {flex:0 0 118px;color:$col-black;font-weight:500;}
-                                            span {display:block;color:$col-default;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;}
+                                            span {display:block;color:$col-default;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
                                             
                                             &:last-child {display:block; margin-bottom:0;padding-top:5px;border-top:1px solid $col-lightGray;
                                                 em {display:block;}

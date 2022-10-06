@@ -2737,7 +2737,6 @@ caption {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  vertical-align: middle;
 }
 .wrap .dtc-section .dtc-detail-wrap .sm-section .dtc-detail-inp .dtc-inp-box.dtc-view .dtc-rightbox-body ul.dtc-info li:last-child {
   display: block;
