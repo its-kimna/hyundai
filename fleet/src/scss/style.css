@@ -7478,7 +7478,7 @@ footer > div .copyright {
 .wrap .map-pin-info.green:before {
   content: "";
   position: absolute;
-  top: 12px;
+  top: 5px;
   left: 40px;
   display: block;
   width: 9px;
@@ -7502,19 +7502,19 @@ footer > div .copyright {
 .wrap .map-pin-info.yg:before {
   content: "";
   position: absolute;
-  top: 12px;
+  top: 5px;
   left: 40px;
   display: block;
   width: 9px;
   height: 9px;
   border-radius: 50%;
   background-color: #3fb16b;
-  z-index: 1;
+  z-index: 2;
 }
 .wrap .map-pin-info.yg:after {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 12px;
   left: 40px;
   display: block;
   width: 9px;
@@ -7684,6 +7684,7 @@ footer > div .copyright {
   background-color: #3fb16b;
 }
 .wrap .result-area .accordion .ignition {
+  position: relative;
   display: inline-block;
   margin-left: 6px;
   height: 30px;
@@ -7692,13 +7693,59 @@ footer > div .copyright {
   color: #999;
   padding-left: 36px;
   vertical-align: middle;
+  background: url("../assets/images/ico-ignition.svg") no-repeat 0% 50%/30px auto;
 }
-.wrap .result-area .accordion .ignition.ignition-on {
+.wrap .result-area .accordion .ignition.on {
   color: #000;
   background: url("../assets/images/ico-ignition-on.svg") no-repeat 0% 50%/30px auto;
 }
-.wrap .result-area .accordion .ignition.ignition-off {
-  background: url("../assets/images/ico-ignition.svg") no-repeat 0% 50%/30px auto;
+.wrap .result-area .accordion .ignition.green:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 24px;
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #3fb16b;
+  z-index: 1;
+}
+.wrap .result-area .accordion .ignition.yellow:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 24px;
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #efb036;
+  z-index: 1;
+}
+.wrap .result-area .accordion .ignition.yg:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 24px;
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #3fb16b;
+  z-index: 2;
+}
+.wrap .result-area .accordion .ignition.yg:after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 24px;
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #efb036;
+  z-index: 1;
 }
 .wrap .popup-wrap {
   position: absolute;
