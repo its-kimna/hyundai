@@ -396,12 +396,15 @@ footer{display:flex;width:100%;height:84px;margin:0px 0px 0;padding:20px 40px;bo
         .logo-link{display:block;width:100%;height:100%}
     }
     >div{flex:1 1 auto;padding-left:40px;
-        ul{display:flex;width:595px;gap:40px;width:610px;font-size:14px;font-weight:bold;
+        ul{display:flex;flex-direction: row;gap:40px;justify-content: flex-start; font-size:14px;font-weight:bold;
             li{position:relative;
-                a{color:#f2f0ee}
+                a{color:#f2f0ee;display:inline-block;line-height:21px;}
                 &:after{content:'';position:absolute;top:7px;right:-20px;display:inline-block;width:4px;height:4px;background-color:#f2f0ee}
                 &:last-child{
                     &:after{display:none}
+                }
+                &.tbdLink {
+                    a{display:inline-block;width:88px;height:21px;font-size:1px;background:url($assetPath + "li-Logo.png") no-repeat 0 0/74px auto;color:transparent}
                 }
             }
         }

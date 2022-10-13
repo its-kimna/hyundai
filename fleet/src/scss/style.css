@@ -1276,9 +1276,9 @@ footer > div {
 }
 footer > div ul {
   display: flex;
-  width: 595px;
+  flex-direction: row;
   gap: 40px;
-  width: 610px;
+  justify-content: flex-start;
   font-size: 14px;
   font-weight: bold;
 }
@@ -1287,6 +1287,8 @@ footer > div ul li {
 }
 footer > div ul li a {
   color: #f2f0ee;
+  display: inline-block;
+  line-height: 21px;
 }
 footer > div ul li:after {
   content: "";
@@ -1300,6 +1302,14 @@ footer > div ul li:after {
 }
 footer > div ul li:last-child:after {
   display: none;
+}
+footer > div ul li.tbdLink a {
+  display: inline-block;
+  width: 88px;
+  height: 21px;
+  font-size: 1px;
+  background: url("../assets/images/li-Logo.png") no-repeat 0 0/74px auto;
+  color: transparent;
 }
 footer > div .copyright {
   color: #999;
