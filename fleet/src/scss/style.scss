@@ -91,6 +91,7 @@ caption{overflow:hidden;margin-left:-9999px;width:1px;height:1px;font-size:1px;l
 .mt30{margin-top:30px !important}
 .mt40{margin-top:40px !important}
 .mr10{margin-right:10px !important}
+.mb20{margin-bottom:20px !important}
 
 .pt0{padding-top:0 !important}
 .padding0 {padding:0 !important;}
@@ -389,6 +390,61 @@ input:placeholder{color:$col-lightGray3}
     }
 
     footer{margin-top:170px}    
+}
+
+// login
+.login {margin-top:218px;
+    header{margin-bottom:30px;
+        .section {background-color:#fff;padding: 0px 0 0;
+            .title {display: inline-block;font-size: 32px;color: #1a252d;margin-left: 5px;vertical-align: top;font-weight: 500;margin-bottom: 0px;}
+        }
+    }  
+    .content {width:580px;margin:0 auto;padding:40px 50px;box-sizing: border-box;background-color:#fafaf9;
+        dl{margin-bottom:30px;
+            dt{font-size: 24px;font-weight: 500;text-align: left;color: #000;margin-bottom:13px;}
+            dd{font-size: 15px;font-weight: 500;text-align: left;color: #000;}
+        }
+        .dropdown {text-align: right;
+            .dropdown-toggle{color:#555;
+                &::after {content: "";display: inline-block;display: inline-block;width: 7px;height: 7px;margin-left: 12px;margin-right: 18px;border: 2px solid #555;border-right: 0;border-bottom: 0; vertical-align: 2px;transform: rotate(-135deg);}
+            }
+        }
+        .inp-group {position:relative;margin-bottom:30px;
+            .form-label {font-size: 15px;font-weight: 500;font-stretch: normal;font-style: normal;line-height: 1.2;letter-spacing: normal;text-align: left;color: #333;}
+            .form-control {font-size:15px;line-height:20px;box-sizing: border-box;
+                &.okinput {padding-right:50px;
+                    + .ok {position: absolute;top: 41px;right: 16px;font-size: 0;width: 19px;height: 14px;background:#FFF url($assetPath + "ico-check.png") no-repeat center center;background-size: 19px 14PX;}
+                }
+                &.pwinput {padding-right:50px;
+                    + .btn-view {position: absolute;top: 41px;right: 16px;padding: 5px 14px;font-size: 0;width: 19px;height: 18px;background: #fff url($assetPath + "ico-show.svg") no-repeat center center;background-size: 19px 18px;
+                        &.on {background: #fff url($assetPath + "ico-hidden.svg") no-repeat center center;background-size: 19px 18px;}
+                    }
+                }
+            }
+        }
+        > p {text-align: right;}
+        .btn-arrow {padding-left:0px;
+            &::before {content: "";display: inline-block;display: inline-block;width: 7px;height: 7px;margin-left: 0px;margin-right: 5px;border: 2px solid #555;border-right: 0;border-bottom: 0; vertical-align: 1px;transform: rotate(-45deg);}
+        }
+        .btn-txt {color:#555;text-decoration:underline;text-align: right;}
+        .btn-primary {width:100%;margin:0; height:40px;line-height:40px; font-size: 15px;font-weight: 500;text-align: center;color: #fff;}
+        .btn-outline-secondary {width:100%;margin:0; height:40px;line-height:40px; font-size: 15px;font-weight: 500;text-align: center;color: #0070d2;border-color:#0070d2;}
+    }
+}
+
+.error {margin-top:218px;
+    header{margin-bottom:30px;
+        .section {background-color:#fff;padding: 0px 0 0;
+            .title {display: inline-block;font-size: 32px;color: #1a252d;margin-left: 5px;vertical-align: top;font-weight: 500;margin-bottom: 0px;}
+        }
+    }  
+    .content {width:700px;margin:0 auto;padding:40px 110px;text-align:center;box-sizing: border-box;background-color:#fafaf9;
+        strong {display:inline-block;font-size: 20px;font-weight: 500;font-stretch: normal;font-style: normal;line-height: normal;letter-spacing: normal;text-align: center;color: #000;
+        &.errorTxt {margin-top:30px;font-size: 36px;font-weight: 500;text-align: center;color: #000;letter-spacing: -1px;}
+        }
+        > p {margin-top:30px; font-size: 15px; font-weight: normal;text-align: center; color: #000;}
+        .btn-outline-secondary {width:100%;margin:0; height:40px;line-height:40px; font-size: 15px;font-weight: 500;text-align: center;color: #0070d2;border-color:#0070d2;}
+    }
 }
 
 footer{display:flex;width:100%;height:84px;margin:0px 0px 0;padding:20px 40px;border-top:1px solid $col-lightGray;background-color:$col-black;
@@ -2076,7 +2132,6 @@ footer{display:flex;width:100%;height:84px;margin:0px 0px 0;padding:20px 40px;bo
                     }
                 }
             }
-    
     
             .flag{display:inline-block;min-width:40px;height:18px;border-radius:9px;padding:0 10px;box-sizing:border-box;color:$col-white;font-size:12px;margin-left:8px;line-height:18px;
                 &.flag-on{background:$col-hover}

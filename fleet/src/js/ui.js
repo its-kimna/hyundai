@@ -61,6 +61,16 @@ $(function(){
 			$(this).siblings('.form-check-label').removeClass('on').siblings().find('input').prop('checked',false);
 		}
 	});
+    //비밀번호 show hide
+	$(".btn-view").on('click', function(e){
+		if($(this).siblings('.pwinput').is('.view')){
+			$(this).siblings('input[type=text]').attr('type','password').removeClass('view');
+			$(this).removeClass('on');
+		}else{
+			$(this).siblings('input[type=password]').attr('type','text').addClass('view');
+			$(this).addClass('on');
+		}
+	});
 
     
 
